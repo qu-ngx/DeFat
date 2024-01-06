@@ -1,16 +1,4 @@
-# defat
+# DeFat
 
-A new Flutter project.
+The application aims to help users create and know about their meals using AI technology, while also providing knowledge about nutritions they need to have to successfully lose their weights and gain confidence.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
