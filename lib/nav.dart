@@ -1,3 +1,4 @@
+import 'package:defat/pages/object_detection.dart';
 import 'package:flutter/material.dart';
 
 class NavPage extends StatefulWidget {
@@ -12,6 +13,7 @@ class _NavPageState extends State<NavPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Buttom Navigation Bar',
       home: Scaffold(
         body: const [
@@ -20,11 +22,7 @@ class _NavPageState extends State<NavPage> {
               'meals page',
             ),
           ),
-          Center(
-            child: Text(
-              'camera page',
-            ),
-          ),
+          MyML(),
           Center(
             child: Text(
               'dictionary page',
@@ -41,16 +39,18 @@ class _NavPageState extends State<NavPage> {
           elevation: 0.0,
           destinations: <NavigationDestination>[
             NavigationDestination(
-              icon: Image.asset("assets/meals.png", width: 30, height: 30),
+              icon:
+                  Image.asset("assets/icons/meals.png", width: 30, height: 30),
               label: "Meals",
             ),
             NavigationDestination(
-              icon:
-                  Image.asset('assets/home_camera.png', width: 30, height: 30),
+              icon: Image.asset('assets/icons/home_camera.png',
+                  width: 30, height: 30),
               label: 'Camera',
             ),
             NavigationDestination(
-              icon: Image.asset('assets/dictionary.png', width: 30, height: 30),
+              icon: Image.asset('assets/icons/dictionary.png',
+                  width: 30, height: 30),
               label: 'Dictionary',
             ),
           ],

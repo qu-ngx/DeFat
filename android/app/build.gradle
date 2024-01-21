@@ -45,10 +45,10 @@ android {
         applicationId "com.example.defat"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        minSdkVersion 26
     }
 
     buildTypes {
@@ -64,4 +64,13 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+android {
+        aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
+}
