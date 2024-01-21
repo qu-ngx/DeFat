@@ -1,5 +1,5 @@
 name: defat
-description: "A new Flutter project."
+description: "A tailor made app for losing weights and confidence."
 publish_to: 'none' 
 version: 1.0.0+1
 environment:
@@ -14,3 +14,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 flutter:
   uses-material-design: true
+  assets:
+   - assets/dictionary.png
+   - assets/home_camera.png
+   - assets/home.png
+   - assets/meals.png

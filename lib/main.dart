@@ -1,4 +1,4 @@
-import 'package:defat/pages/home.dart';
+import 'package:defat/nav.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: NavPage(),
     );
   }
 }
