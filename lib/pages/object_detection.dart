@@ -210,14 +210,14 @@ class ObjectDetection {
   ) {
     log('Running inference...');
 
-    // Set input tensor [1, 256, 256, 3]
+    // Set input tensor [1, 300, 300, 3]
     final input = [imageMatrix];
 
     // Set output tensor
-    // Locations: [1, 10, 4]
     // Classes: [1, 10],
-    // Scores: [1, 10],
+    // Locations: [1, 10, 4]
     // Number of detections: [1]
+    // Scores: [1, 10],LL
     final output = {
       0: [List<num>.filled(10, 0)],
       1: [List<List<num>>.filled(10, List<num>.filled(4, 0))],
