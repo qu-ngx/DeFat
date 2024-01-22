@@ -11,6 +11,7 @@ dependencies:
   tflite_flutter: ^0.10.4 
   image_picker: ^0.8.8
   image: ^4.0.17
+  firebase_core: ^2.24.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

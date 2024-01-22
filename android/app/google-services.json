@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "865969018102",
+    "project_id": "defat-e1a2d",
+    "storage_bucket": "defat-e1a2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865969018102:android:5716e5df0baca058a988d7",
+        "android_client_info": {
+          "package_name": "com.example.defat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA2YBX3BU1x6GCoZrVTtZw41q-BxGv6HA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
