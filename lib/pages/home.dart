@@ -1,4 +1,4 @@
-import 'package:defat/pages/object_detection.dart';
+import 'package:defat/pages/food_detection/fd_front.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
             'meals page',
           ),
         ),
-        MyML(),
+        FoodML(),
         Center(
           child: Text(
             'dictionary page',

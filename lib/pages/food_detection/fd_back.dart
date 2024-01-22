@@ -4,86 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 import 'package:tflite_flutter/tflite_flutter.dart';
 
-import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-
-class MyML extends StatefulWidget {
-  const MyML({super.key});
-
-  @override
-  State<MyML> createState() => _MyMLState();
-}
-
-class _MyMLState extends State<MyML> {
-  final imagePicker = ImagePicker();
-
-  ObjectDetection? objectDetection;
-
-  Uint8List? image;
-
-  @override
-  void initState() {
-    super.initState();
-    objectDetection = ObjectDetection();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Center(
-                child: (image != null) ? Image.memory(image!) : Container(),
-              ),
-            ),
-            SizedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  if (Platform.isAndroid || Platform.isIOS)
-                    IconButton(
-                      onPressed: () async {
-                        final result = await imagePicker.pickImage(
-                          source: ImageSource.camera,
-                        );
-                        if (result != null) {
-                          image = objectDetection!.analyseImage(result.path);
-                          setState(() {});
-                        }
-                      },
-                      icon: const Icon(
-                        Icons.camera,
-                        size: 64,
-                      ),
-                    ),
-                  IconButton(
-                    onPressed: () async {
-                      final result = await imagePicker.pickImage(
-                        source: ImageSource.gallery,
-                      );
-                      if (result != null) {
-                        image = objectDetection!.analyseImage(result.path);
-                        setState(() {});
-                      }
-                    },
-                    icon: const Icon(
-                      Icons.photo,
-                      size: 64,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ObjectDetection {
+class FoodDetection {
   static const String _modelPath =
       'assets/models/custom_ssd_mobilenet_v2.tflite';
   static const String _labelPath = 'assets/models/labelmap.txt';
@@ -91,7 +12,7 @@ class ObjectDetection {
   Interpreter? _interpreter;
   List<String>? _labels;
 
-  ObjectDetection() {
+  FoodDetection() {
     _loadModel();
     _loadLabels();
     log('Done.');
@@ -212,19 +133,13 @@ class ObjectDetection {
 
     // Set input tensor [1, 300, 300, 3]
     final input = [imageMatrix];
-
-    // Set output tensor
-    // Classes: [1, 10],
-    // Locations: [1, 10, 4]
-    // Number of detections: [1]
-    // Scores: [1, 10],LL
+    // Set output tensor Classes: [1, 10], Locations: [1, 10, 4], Number of detections: [1], Scores: [1, 10]
     final output = {
       0: [List<num>.filled(10, 0)],
       1: [List<List<num>>.filled(10, List<num>.filled(4, 0))],
       2: [0.0],
       3: [List<num>.filled(10, 0)],
     };
-
     _interpreter!.runForMultipleInputs([input], output);
     return output.values.toList();
   }
