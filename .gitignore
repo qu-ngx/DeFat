@@ -43,4 +43,4 @@ app.*.map.json
 /android/app/release
 
 # Ignore API keys
-/lib/api_key.dart
+/lib/authenticator/api_key.dart
