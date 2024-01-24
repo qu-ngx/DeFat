@@ -1,4 +1,5 @@
 import 'package:defat/pages/food_detection/fd_front.dart';
+import 'package:defat/pages/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,6 +26,7 @@ class _HomePageState extends State<HomePage> {
             'dictionary page',
           ),
         ),
+        ProfilePage()
       ][selectedPageIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedPageIndex,
@@ -49,6 +51,8 @@ class _HomePageState extends State<HomePage> {
                 width: 30, height: 30),
             label: 'Dictionary',
           ),
+          const NavigationDestination(
+              icon: Icon(Icons.person), label: 'Profile')
         ],
       ),
     );
