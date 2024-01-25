@@ -17,8 +17,11 @@ class _ProfilePageState extends State<ProfilePage> {
   // Get the current user
   final currentUser = FirebaseAuth.instance.currentUser!;
 
-  //edit field
+  // edit field
   Future<void> editField(String field) async {}
+
+  //edit field
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +61,16 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
 
           // username
-          // MyTextBox(text: 'quangnguyen', sectionName: 'username', onPressed: () => editField('username')),
+          MyTextBox(
+              text: 'username',
+              sectionName: 'username',
+              onPressed: () => editField('username')),
+
+          // bio
+          MyTextBox(
+              text: 'empty',
+              sectionName: 'bio',
+              onPressed: () => editField('username')),
 
           const SizedBox(height: 50),
 

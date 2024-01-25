@@ -48,6 +48,7 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
+  // display error messages
   void errorLogInMessage(String errorMessage) {
     showDialog(
       context: context,
