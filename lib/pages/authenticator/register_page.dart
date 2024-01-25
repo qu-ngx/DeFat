@@ -35,8 +35,10 @@ class _RegisterPageState extends State<RegisterPage> {
             email: emailController.text, password: passwordController.text);
       } else {
         errorLogInMessage("Passwords don't match");
+        return;
       }
 
+      // try creating the user
       // ignore: use_build_context_synchronously
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
