@@ -4,20 +4,20 @@ import 'package:defat/components/square_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class LoginPage extends StatefulWidget {
+class RegisterPage extends StatefulWidget {
   final Function()? onTap;
-  const LoginPage({super.key, required this.onTap});
+  const RegisterPage({super.key, required this.onTap});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final emailController = TextEditingController();
-
   final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
-  void signUserIn() async {
+  void signUserUp() async {
     // showing loading circle
     showDialog(
       context: context,
@@ -28,10 +28,15 @@ class _LoginPageState extends State<LoginPage> {
       },
     );
 
-    // try sign in
+    // try creating new user
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: emailController.text, password: passwordController.text);
+      if (passwordController.text == confirmPasswordController.text) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text, password: passwordController.text);
+      } else {
+        errorLogInMessage("Passwords don't match");
+      }
+
       // ignore: use_build_context_synchronously
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
@@ -39,18 +44,7 @@ class _LoginPageState extends State<LoginPage> {
       // ignore: use_build_context_synchronously
       Navigator.pop(context);
       // Catch errors with messages to users
-      switch (e.code) {
-        case 'user-not-found':
-          errorLogInMessage(
-              "There is no account with the listing information. Please try again or create a new account!");
-        case 'invalid-email':
-          errorLogInMessage("Invalid email. Please check email again!");
-        case 'user-disabled':
-          errorLogInMessage(
-              "Your account is locked. Please contact the admin for more!");
-        case 'wrong-password':
-          errorLogInMessage("Invalid password for existed account");
-      }
+      errorLogInMessage(e.code);
     }
   }
 
@@ -80,19 +74,15 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               // Logo
               const Icon(
                 Icons.lock,
-                size: 100,
+                size: 50,
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               const Text(
-                "Welcome to DeFat.",
-                style: TextStyle(color: Colors.grey, fontSize: 15),
-              ),
-              const Text(
-                "Ready for a fitter body and a healthier life?",
+                "Let's create an account for you \n Journey to a fitter body is close",
                 style: TextStyle(color: Colors.grey, fontSize: 15),
               ),
               const SizedBox(height: 25),
@@ -109,6 +99,15 @@ class _LoginPageState extends State<LoginPage> {
               // password textfield
               MyTextField(
                 controller: passwordController,
+                hintText: 'Password',
+                obscureText: true,
+              ),
+
+              const SizedBox(height: 10),
+
+              // confirm password
+              MyTextField(
+                controller: confirmPasswordController,
                 hintText: 'Password',
                 obscureText: true,
               ),
@@ -132,8 +131,8 @@ class _LoginPageState extends State<LoginPage> {
 
               const SizedBox(height: 20),
 
-              // Sign-in button
-              SignInOutButton(signState: "Sign In", onTap: signUserIn),
+              // Sign Up Button
+              SignInOutButton(signState: "Sign Up", onTap: signUserUp),
 
               const SizedBox(height: 40),
 
@@ -171,16 +170,19 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 30),
 
-              // not a member? register text button
+              // not a member? register now
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Not a member?"),
+                  Text(
+                    "Already have an account?",
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
                   const SizedBox(width: 4),
                   GestureDetector(
                     onTap: widget.onTap,
                     child: const Text(
-                      "Register Now",
+                      "Login Now",
                       style: TextStyle(
                           color: Colors.blue, fontWeight: FontWeight.bold),
                     ),

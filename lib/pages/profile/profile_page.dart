@@ -1,15 +1,19 @@
+import 'package:defat/components/loginout_button.dart';
 import 'package:defat/components/profile_textbox.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
-
   @override
   State<ProfilePage> createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
   // Get the current user
   final currentUser = FirebaseAuth.instance.currentUser!;
 
@@ -55,6 +59,10 @@ class _ProfilePageState extends State<ProfilePage> {
 
           // username
           // MyTextBox(text: 'quangnguyen', sectionName: 'username', onPressed: () => editField('username')),
+
+          const SizedBox(height: 50),
+
+          SignInOutButton(signState: "Sign Out", onTap: signUserOut)
         ],
       ),
     );
