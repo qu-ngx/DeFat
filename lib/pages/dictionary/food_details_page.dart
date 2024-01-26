@@ -1,3 +1,4 @@
+import 'package:defat/components/button.dart';
 import 'package:defat/models/food.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,9 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
       quantityCount++;
     });
   }
+
+  // add to Meal Planner
+  void addToMealPlanner() {}
 
   @override
   Widget build(BuildContext context) {
@@ -182,6 +186,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   height: 25,
                 ),
                 // add total quantity to meal planner button
+
+                MyButton(text: "Add to Meal Planner", onTap: addToMealPlanner)
               ],
             ),
           ),
