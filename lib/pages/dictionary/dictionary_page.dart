@@ -1,5 +1,6 @@
 import 'package:defat/components/food_tile.dart';
 import 'package:defat/models/food.dart';
+import 'package:defat/pages/dictionary/food_details_page.dart';
 import 'package:flutter/material.dart';
 
 class DictPage extends StatefulWidget {
@@ -85,6 +86,18 @@ class _DictPageState extends State<DictPage> {
         fibers: 0),
   ];
 
+  // navigate to each food details page
+  void navigateToFoodDetails(int index) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FoodDetailsPage(
+          food: foodList[index],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,17 +138,17 @@ class _DictPageState extends State<DictPage> {
           const SizedBox(height: 25),
 
           // Common food list
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text(
-              "Most Common Food",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.grey[800],
-                fontSize: 18,
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(top: 25.0, bottom: 25),
+          //   child: Text(
+          //     "Most Common Food",
+          //     style: TextStyle(
+          //       fontWeight: FontWeight.bold,
+          //       color: Colors.grey[800],
+          //       fontSize: 18,
+          //     ),
+          //   ),
+          // ),
 
           Expanded(
             child: Padding(
@@ -145,6 +158,7 @@ class _DictPageState extends State<DictPage> {
                 itemCount: foodList.length,
                 itemBuilder: (context, index) => FoodTile(
                   food: foodList[index],
+                  onTap: () => navigateToFoodDetails(index),
                 ),
               ),
             ),
