@@ -11,6 +11,23 @@ class FoodDetailsPage extends StatefulWidget {
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
+  // quantity here is gram (quantityCount * 100)
+  int quantityCount = 0;
+
+  // decrement quantity
+  void decrementQuantity() {
+    setState(() {
+      quantityCount--;
+    });
+  }
+
+  // increment quantity
+  void incrementQuantity() {
+    setState(() {
+      quantityCount++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,14 +101,88 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   ),
 
                   Text(
-                      "Something please do description later or import from the food file",
-                      style: TextStyle(
-                        color: Colors.grey[600],
-                        fontSize: 14,
-                        height: 1,
-                      ))
+                    "Something please do description later or import from the food file",
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontSize: 14,
+                      height: 1,
+                    ),
+                  ),
                 ],
               ),
+            ),
+          ),
+
+          // Bar to add the following food to the meal planner
+          Container(
+            color: Colors.yellow[700],
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              children: [
+                // calories + quantity
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "${widget.food.calories} calories \n per 100 grams",
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+
+                    // quantity
+                    Row(
+                      children: [
+                        // substract quantity from tempo meal planner
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.yellow[500],
+                              shape: BoxShape.circle),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.remove,
+                              color: Colors.black,
+                            ),
+                            onPressed: decrementQuantity,
+                          ),
+                        ),
+
+                        SizedBox(
+                          width: 40,
+                          child: Center(
+                            child: Text(
+                              (quantityCount * widget.food.calories).toString(),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20),
+                            ),
+                          ),
+                        ),
+
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.yellow[500],
+                              shape: BoxShape.circle),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.add,
+                              color: Colors.black,
+                            ),
+                            onPressed: incrementQuantity,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+
+                const SizedBox(
+                  height: 25,
+                ),
+                // add total quantity to meal planner button
+              ],
             ),
           ),
         ],
