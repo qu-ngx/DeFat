@@ -7,7 +7,7 @@ class Planner extends ChangeNotifier {
         label: "french_fries",
         name: "French Fries",
         imagePath: "assets/images/french-fries.png",
-        calories: 1,
+        calories: 100,
         fat: 0,
         proteins: 0,
         carbs: 0,
@@ -97,5 +97,45 @@ class Planner extends ChangeNotifier {
   void removeFromMealPlanner(Food food) {
     _planner.remove(food);
     notifyListeners();
+  }
+
+  int totalCaloriesCount() {
+    int totalCalories = 0;
+    for (int i = 0; i < _planner.length; i++) {
+      totalCalories += _planner[i].calories;
+    }
+    return totalCalories;
+  }
+
+  int totalFatCount() {
+    int totalFat = 0;
+    for (int i = 0; i < _planner.length; i++) {
+      totalFat += _planner[i].fat;
+    }
+    return totalFat;
+  }
+
+  int totalProteinsCount() {
+    int totalProteins = 0;
+    for (int i = 0; i < _planner.length; i++) {
+      totalProteins += _planner[i].proteins;
+    }
+    return totalProteins;
+  }
+
+  int totalCarbsCount() {
+    int totalCarbs = 0;
+    for (int i = 0; i < _planner.length; i++) {
+      totalCarbs += _planner[i].carbs;
+    }
+    return totalCarbs;
+  }
+
+  int totalFibersCount() {
+    int totalFibers = 0;
+    for (int i = 0; i < _planner.length; i++) {
+      totalFibers += _planner[i].fibers;
+    }
+    return totalFibers;
   }
 }

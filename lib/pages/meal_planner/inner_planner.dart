@@ -65,6 +65,7 @@ class InnerMealPlanner extends StatelessWidget {
                     icon: const Icon(Icons.remove),
                     onPressed: () {
                       removeFromMealPlanner(food, context);
+                      // THIS MUST BE IMPORTANT ONE
                     }),
               ),
             );
