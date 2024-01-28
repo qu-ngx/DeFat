@@ -1,14 +1,21 @@
+import 'package:defat/models/planner.dart';
 import 'package:defat/pages/authenticator/auth_page.dart';
 import 'package:defat/pages/authenticator/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+
+  // Wrap the whole app with change notifier provider
+  runApp(ChangeNotifierProvider(
+    create: (context) => Planner(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatefulWidget {

@@ -1,7 +1,8 @@
 import 'package:defat/components/food_tile.dart';
-import 'package:defat/models/food.dart';
+import 'package:defat/models/planner.dart';
 import 'package:defat/pages/dictionary/food_details_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DictPage extends StatefulWidget {
   const DictPage({super.key});
@@ -11,83 +12,11 @@ class DictPage extends StatefulWidget {
 }
 
 class _DictPageState extends State<DictPage> {
-  List foodList = [
-    Food(
-        label: "french_fries",
-        name: "French Fries",
-        imagePath: "assets/images/french-fries.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "sausage",
-        name: "Sausage",
-        imagePath: "assets/images/sausage.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "grilled_chicken",
-        name: "Grilled Chicken",
-        imagePath: "assets/images/grilled-chicken.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "fish",
-        name: "Fish",
-        imagePath: "assets/images/fish.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "scrambled_egg",
-        name: "Scrambled Egg",
-        imagePath: "assets/images/scrambled-egg.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "pasta",
-        name: "Pasta",
-        imagePath: "assets/images/pasta.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "lettuce",
-        name: "Lettuce",
-        imagePath: "assets/images/lettuce.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-    Food(
-        label: "cantaloupe",
-        name: "Cantaloupe",
-        imagePath: "assets/images/cantaloupe.png",
-        calories: 1,
-        fat: 0,
-        proteins: 0,
-        carbs: 0,
-        fibers: 0),
-  ];
-
-  // navigate to each food details page
+  // Navigate to each food details page
   void navigateToFoodDetails(int index) {
+    // Access the models of food
+    final planner = context.read<Planner>();
+    final foodList = planner.foodList;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -100,6 +29,10 @@ class _DictPageState extends State<DictPage> {
 
   @override
   Widget build(BuildContext context) {
+    // get the planner and it's menu (food)
+    final planner = context.read<Planner>();
+    final foodList = planner.foodList;
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
@@ -110,7 +43,7 @@ class _DictPageState extends State<DictPage> {
           color: Colors.grey[900],
         ),
         title: Text(
-          "Food Dictionary",
+          "Food Search",
           style: TextStyle(color: Colors.grey[900]),
         ),
       ),

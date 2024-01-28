@@ -1,5 +1,7 @@
 import 'package:defat/pages/dictionary/dictionary_page.dart';
 import 'package:defat/pages/food_detection/fd_front.dart';
+import 'package:defat/pages/meal_planner/inner_planner.dart';
+import 'package:defat/pages/meal_planner/meal_planner_page.dart';
 import 'package:defat/pages/profile/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: const [
-        Center(
-          child: Text(
-            'meals page',
-          ),
-        ),
+        MealPlannerPage(),
         FoodML(),
         DictPage(),
         ProfilePage()

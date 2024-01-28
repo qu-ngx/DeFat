@@ -18,12 +18,12 @@ class Food {
       required this.carbs,
       required this.fibers});
 
-  String get _label => label;
-  String get _name => name;
-  String get _imagePath => imagePath;
-  String get _calories => calories.toString();
-  String get _fat => fat.toString();
-  String get _proteins => proteins.toString();
-  String get _carbs => carbs.toString();
-  String get _fibers => fibers.toString();
+  // String get _label => label;
+  // String get _name => name;
+  // String get _imagePath => imagePath;
+  // String get _calories => calories.toString();
+  // String get _fat => fat.toString();
+  // String get _proteins => proteins.toString();
+  // String get _carbs => carbs.toString();
+  // String get _fibers => fibers.toString();
 }

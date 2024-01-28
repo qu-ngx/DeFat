@@ -1,6 +1,8 @@
 import 'package:defat/components/button.dart';
 import 'package:defat/models/food.dart';
+import 'package:defat/models/planner.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FoodDetailsPage extends StatefulWidget {
   final Food food;
@@ -18,7 +20,9 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
   // decrement quantity
   void decrementQuantity() {
     setState(() {
-      quantityCount--;
+      if (quantityCount > 0) {
+        quantityCount--;
+      }
     });
   }
 
@@ -30,7 +34,42 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
   }
 
   // add to Meal Planner
-  void addToMealPlanner() {}
+  void addToMealPlanner() {
+    // only add to meal planner when there is actually a thing in a meal planner
+    if (quantityCount > 0) {
+      // get access to the meal planener
+      final planner = context.read<Planner>();
+
+      // add to the meal planner
+      planner.addToMealPlanner(widget.food, quantityCount);
+
+      // let user know it was successful
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          content: const Text(
+            "Successfully added to your meal planner",
+            textAlign: TextAlign.center,
+          ),
+          actions: [
+            //okay button
+            IconButton(
+                onPressed: () {
+                  // Pop once to remove dialog box
+                  Navigator.pop(context);
+
+                  // Pop again to go previous screen
+                  Navigator.pop(context);
+                },
+                icon: const Icon(
+                  Icons.done,
+                  color: Colors.black,
+                )),
+          ],
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +196,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                           child: Center(
                             child: Text(
                               (quantityCount * widget.food.calories).toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20),

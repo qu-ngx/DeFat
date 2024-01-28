@@ -28,7 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: const Text("Profile"),
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.transparent,
       ),
       body: ListView(
         children: [
