@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SquareTile extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final imagePath;
   const SquareTile({super.key, required this.imagePath});
 

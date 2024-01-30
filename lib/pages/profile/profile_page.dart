@@ -27,7 +27,10 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        title: const Text("Profile"),
+        title: const Text(
+          "Profile",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.transparent,
       ),
       body: ListView(
@@ -62,17 +65,17 @@ class _ProfilePageState extends State<ProfilePage> {
 
           // username
           MyTextBox(
-              text: 'username',
+              text: 'None',
               sectionName: 'username',
               onPressed: () => editField('username')),
 
           // bio
           MyTextBox(
-              text: 'empty',
+              text: 'None',
               sectionName: 'bio',
               onPressed: () => editField('username')),
 
-          const SizedBox(height: 50),
+          const SizedBox(height: 70),
 
           SignInOutButton(signState: "Sign Out", onTap: signUserOut)
         ],

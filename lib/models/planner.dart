@@ -78,6 +78,7 @@ class Planner extends ChangeNotifier {
   ];
 
   // custom meal planner
+  // ignore: prefer_final_fields
   List<Food> _planner = [];
 
   // getter methods
@@ -137,5 +138,14 @@ class Planner extends ChangeNotifier {
       totalFibers += _planner[i].fibers;
     }
     return totalFibers;
+  }
+
+  // Show the Food in AI camera
+  showTheFood(String label) {
+    for (int i = 0; i < _foodList.length; i++) {
+      if (label == _foodList[i].label) {
+        return _foodList[i];
+      }
+    }
   }
 }

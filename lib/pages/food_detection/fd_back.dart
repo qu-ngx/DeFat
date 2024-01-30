@@ -113,11 +113,11 @@ class FoodDetection {
         // Label drawing
         img.drawString(
           imageInput,
-          '${classification[i]} ${scoresTensor[i]}',
+          '${classification[i]} ${(scoresTensor[i] * 100).toInt()}%',
           font: img.arial14,
           x: locations[i][1] + 7,
           y: locations[i][0] + 7,
-          color: img.ColorRgb8(0, 255, 0),
+          color: img.ColorRgb8(255, 0, 0),
         );
       }
     }
@@ -142,5 +142,64 @@ class FoodDetection {
     };
     _interpreter!.runForMultipleInputs([input], output);
     return output.values.toList();
+  }
+
+  String? getPredLabel(String imagePath) {
+    log('Analysing image...');
+    // Reading image bytes from file
+    final imageData = File(imagePath).readAsBytesSync();
+
+    // Decoding image
+    final image = img.decodeImage(imageData);
+
+    // Resizing image fpr model, [300, 300]
+    final imageInput = img.copyResize(
+      image!,
+      width: 300,
+      height: 300,
+    );
+
+    // Creating matrix representation, [300, 300, 3]
+    final imageMatrix = List.generate(
+      imageInput.height,
+      (y) => List.generate(
+        imageInput.width,
+        (x) {
+          final pixel = imageInput.getPixel(x, y);
+          return [pixel.r, pixel.g, pixel.b];
+        },
+      ),
+    );
+
+    final output = _runInference(imageMatrix);
+
+    // Process Tensors from the output
+    final scoresTensor = output[0].first as List<double>;
+    final classesTensor = output[3].first as List<double>;
+
+    log('Processing outputs...');
+
+    // Process bounding boxes
+
+    // Convert class indices to int
+    final classes = classesTensor.map((value) => value.toInt()).toList();
+
+    // Number of detections
+    final numberOfDetections = output[2].first as double;
+
+    // Get classifcation with label
+    final List<String> classification = [];
+    for (int i = 0; i < numberOfDetections; i++) {
+      classification.add(_labels![classes[i]]);
+    }
+
+    log('Outlining objects...');
+    for (var i = 0; i < numberOfDetections; i++) {
+      if (scoresTensor[i] > 0.85) {
+        return classification[i];
+      }
+
+      log('Done.');
+    }
   }
 }

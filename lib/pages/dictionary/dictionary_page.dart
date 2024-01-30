@@ -38,13 +38,10 @@ class _DictPageState extends State<DictPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.menu_book_rounded,
-          color: Colors.grey[900],
-        ),
         title: Text(
           "Food Search",
-          style: TextStyle(color: Colors.grey[900]),
+          style:
+              TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),
         ),
       ),
       body: Column(

@@ -24,49 +24,52 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
   }
 
   Future caloriesCountPercentGet() async {
+    // ignore: unused_local_variable
     final planner = context.read<Planner>();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Planner>(
-        builder: (context, value, child) => Scaffold(
-              backgroundColor: Colors.grey[300],
-              appBar: AppBar(
-                title: const Text("Meals"),
-                backgroundColor: Colors.transparent,
-              ),
-              body: Consumer<Planner>(
-                  builder: (context, value, child) => Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                              child: CircularPercentIndicator(
-                            radius: 150,
-                            lineWidth: 30,
-                            percent: value.totalCaloriesCount() / 2500,
-                            progressColor: Colors.green,
-                            backgroundColor: Colors.green.shade100,
-                            circularStrokeCap: CircularStrokeCap.round,
-                          )),
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(25),
-                            child: Column(
-                              children: [
-                                MyButton(
-                                  text: "Inspect your meal planner",
-                                  onTap: () {
-                                    navigateToInnerPlanner(context);
-                                  },
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      )),
-            ));
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          "Meals",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.transparent,
+      ),
+      body: Consumer<Planner>(
+          builder: (context, value, child) => Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                      child: CircularPercentIndicator(
+                    radius: 150,
+                    lineWidth: 30,
+                    percent: value.totalCaloriesCount() / 2500,
+                    progressColor: Colors.yellow,
+                    backgroundColor: Colors.yellow.shade100,
+                    circularStrokeCap: CircularStrokeCap.round,
+                  )),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(25),
+                    child: Column(
+                      children: [
+                        MyButton(
+                          text: "Plan your meal ",
+                          onTap: () {
+                            navigateToInnerPlanner(context);
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              )),
+    );
   }
 }
