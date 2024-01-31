@@ -32,14 +32,17 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text(
-          "Meals",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.transparent,
-      ),
+      // appBar: AppBar(
+      //   title: const Text(
+      //     "Meals",
+      //     style: TextStyle(fontWeight: FontWeight.bold),
+      //   ),
+      //   backgroundColor: Colors.transparent,
+      // ),
       body: ListView(children: [
+        const SizedBox(
+          height: 35,
+        ),
         Consumer<Planner>(
             builder: (context, value, child) => Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +64,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                             fontWeight: FontWeight.bold, fontSize: 17),
                       ),
                     )),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 100),
                     // Button
                     Container(
                       padding: const EdgeInsets.all(25),
