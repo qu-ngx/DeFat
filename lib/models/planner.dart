@@ -141,7 +141,7 @@ class Planner extends ChangeNotifier {
   }
 
   // Show the Food in AI camera
-  showTheFood(String label) {
+  showTheFood(String? label) {
     for (int i = 0; i < _foodList.length; i++) {
       if (label == _foodList[i].label) {
         return _foodList[i];

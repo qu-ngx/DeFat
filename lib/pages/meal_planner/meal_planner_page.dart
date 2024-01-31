@@ -30,6 +30,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
 
   @override
   Widget build(BuildContext context) {
+    String dropdownValue = "Click to view all nutritions in your meal";
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -39,37 +40,106 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
         ),
         backgroundColor: Colors.transparent,
       ),
-      body: Consumer<Planner>(
-          builder: (context, value, child) => Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(
-                      child: CircularPercentIndicator(
-                    radius: 150,
-                    lineWidth: 30,
-                    percent: value.totalCaloriesCount() / 2500,
-                    progressColor: Colors.yellow,
-                    backgroundColor: Colors.yellow.shade100,
-                    circularStrokeCap: CircularStrokeCap.round,
-                  )),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(25),
-                    child: Column(
-                      children: [
-                        MyButton(
-                          text: "Plan your meal ",
-                          onTap: () {
-                            navigateToInnerPlanner(context);
-                          },
-                        ),
-                      ],
+      body: ListView(children: [
+        Consumer<Planner>(
+            builder: (context, value, child) => Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 70,
                     ),
-                  ),
-                ],
-              )),
+                    Center(
+                        child: CircularPercentIndicator(
+                      radius: 130,
+                      lineWidth: 25,
+                      percent: value.totalCaloriesCount() / 2500,
+                      progressColor: Colors.yellow,
+                      backgroundColor: Colors.yellow.shade100,
+                      circularStrokeCap: CircularStrokeCap.round,
+                      center: Text(
+                        "${value.totalCaloriesCount()} / 2500 calories",
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 17),
+                      ),
+                    )),
+                    const SizedBox(height: 50),
+                    // Button
+                    Container(
+                      padding: const EdgeInsets.all(25),
+                      child: Column(
+                        children: [
+                          MyButton(
+                            text: "Plan your meal ",
+                            onTap: () {
+                              navigateToInnerPlanner(context);
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Center(
+                      child: Column(
+                        children: [
+                          CircularPercentIndicator(
+                            radius: 90,
+                            lineWidth: 17,
+                            progressColor: Colors.orange,
+                            backgroundColor: Colors.orange.shade100,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            center: Text(
+                              "   Fat \n ${value.totalFatCount()} / 50",
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          const SizedBox(height: 70),
+                          CircularPercentIndicator(
+                            radius: 90,
+                            lineWidth: 17,
+                            progressColor: Colors.red,
+                            backgroundColor: Colors.red.shade100,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            center: Text(
+                              " Carbs \n ${value.totalCarbsCount()} / 50",
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          const SizedBox(height: 70),
+                          CircularPercentIndicator(
+                            radius: 90,
+                            lineWidth: 17,
+                            progressColor: Colors.green,
+                            backgroundColor: Colors.green.shade100,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            center: Text(
+                              "Fibers \n ${value.totalFibersCount()} / 50",
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          const SizedBox(height: 70),
+                          CircularPercentIndicator(
+                            radius: 90,
+                            lineWidth: 17,
+                            progressColor: Colors.blue,
+                            backgroundColor: Colors.blue.shade100,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            center: Text(
+                              "Proteins\n  ${value.totalFatCount()} / 50",
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          const SizedBox(height: 70),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 50),
+                  ],
+                )),
+      ]),
     );
   }
 }

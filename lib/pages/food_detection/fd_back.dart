@@ -198,8 +198,8 @@ class FoodDetection {
       if (scoresTensor[i] > 0.85) {
         return classification[i];
       }
-
       log('Done.');
     }
+    return null;
   }
 }
