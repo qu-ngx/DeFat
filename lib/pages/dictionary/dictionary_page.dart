@@ -34,19 +34,19 @@ class _DictPageState extends State<DictPage> {
     final foodList = planner.foodList;
 
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: Text(
-          "Food Search",
-          style:
-              TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),
-        ),
-      ),
+      backgroundColor: Colors.white,
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: Text(
+      //     "Food Search",
+      //     style:
+      //         TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),
+      //   ),
+      // ),
       body: Column(
         children: [
-          const SizedBox(height: 20),
+          const SizedBox(height: 50),
 
           // search bar
           Padding(
@@ -54,18 +54,18 @@ class _DictPageState extends State<DictPage> {
             child: TextField(
               decoration: InputDecoration(
                 focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: Colors.white),
+                  borderSide: const BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: Colors.white),
+                  borderSide: const BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),
           ),
 
-          const SizedBox(height: 25),
+          const SizedBox(height: 5),
 
           // Common food list
           // Padding(
@@ -82,7 +82,7 @@ class _DictPageState extends State<DictPage> {
 
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 50, right: 50),
+              padding: const EdgeInsets.only(left: 30, right: 30),
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: foodList.length,

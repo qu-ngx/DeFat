@@ -15,8 +15,9 @@ class FoodTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 150,
-        height: 250,
+        padding: EdgeInsets.only(top: 30),
+        width: 450,
+        height: 300,
         decoration: BoxDecoration(
             color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
         margin: const EdgeInsets.only(bottom: 5, top: 5),
@@ -34,6 +35,7 @@ class FoodTile extends StatelessWidget {
               ),
               Text(
                 food.name,
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),

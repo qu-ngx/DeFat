@@ -25,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
           "Profile",
@@ -49,17 +49,18 @@ class _ProfilePageState extends State<ProfilePage> {
           Text(
             currentUser.email!,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey[700]),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 50),
 
           // user details
-          Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 25.0),
             child: Text(
               'My details',
-              style: TextStyle(color: Colors.grey[600]),
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             ),
           ),
 
