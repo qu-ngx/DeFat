@@ -15,7 +15,7 @@ class FoodTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.only(top: 30),
         width: 450,
         height: 300,
         decoration: BoxDecoration(

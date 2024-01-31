@@ -49,7 +49,8 @@ class _ProfilePageState extends State<ProfilePage> {
           Text(
             currentUser.email!,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            style: const TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 50),
