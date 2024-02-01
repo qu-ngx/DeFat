@@ -63,92 +63,101 @@ class _FoodMLState extends State<FoodML> {
   Widget build(BuildContext context) {
     final planner = context.read<Planner>();
     return Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: const Text(
+            "AI Food Camera",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ),
         body: SafeArea(
-      child: Stack(
-        children: [
-          Column(
-            children: <Widget>[
-              Expanded(
-                child: Center(
-                  child: (image != null) ? Image.memory(image!) : Container(),
-                ),
-              ),
-              SizedBox(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    if (Platform.isAndroid || Platform.isIOS)
-                      IconButton(
-                        onPressed: () async {
-                          final result = await imagePicker.pickImage(
-                            source: ImageSource.camera,
-                          );
-                          if (result != null) {
-                            image = foodDetection!.analyseImage(result.path);
+          child: Stack(
+            children: [
+              Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Center(
+                      child:
+                          (image != null) ? Image.memory(image!) : Container(),
+                    ),
+                  ),
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        if (Platform.isAndroid || Platform.isIOS)
+                          IconButton(
+                            onPressed: () async {
+                              final result = await imagePicker.pickImage(
+                                source: ImageSource.camera,
+                              );
+                              if (result != null) {
+                                image =
+                                    foodDetection!.analyseImage(result.path);
+                                setState(() {});
+                              }
+                            },
+                            icon: const Icon(
+                              Icons.camera,
+                              size: 64,
+                            ),
+                          ),
+                        IconButton(
+                          onPressed: () async {
+                            final result = await imagePicker.pickImage(
+                              source: ImageSource.gallery,
+                            );
+                            if (result != null) {
+                              image = foodDetection!.analyseImage(result.path);
+
+                              String? label;
+                              label = foodDetection!.getPredLabel(result.path);
+
+                              Food foodItem = planner.showTheFood(label!);
+
+                              String name = foodItem.name;
+
+                              int calories = foodItem.calories;
+
+                              int carbs = foodItem.carbs;
+
+                              int fibers = foodItem.fibers;
+
+                              int fat = foodItem.fat;
+
+                              int proteins = foodItem.proteins;
+
+                              widgetList.add(foodInfoDropDown(name, calories,
+                                  fat, fibers, carbs, proteins));
+                            }
                             setState(() {});
-                          }
-                        },
-                        icon: const Icon(
-                          Icons.camera,
-                          size: 64,
+                          },
+                          icon: const Icon(
+                            Icons.photo,
+                            size: 64,
+                          ),
                         ),
-                      ),
-                    IconButton(
-                      onPressed: () async {
-                        final result = await imagePicker.pickImage(
-                          source: ImageSource.gallery,
-                        );
-                        if (result != null) {
-                          image = foodDetection!.analyseImage(result.path);
-
-                          String? label;
-                          label = foodDetection!.getPredLabel(result.path);
-
-                          Food foodItem = planner.showTheFood(label!);
-
-                          String name = foodItem.name;
-
-                          int calories = foodItem.calories;
-
-                          int carbs = foodItem.carbs;
-
-                          int fibers = foodItem.fibers;
-
-                          int fat = foodItem.fat;
-
-                          int proteins = foodItem.proteins;
-
-                          widgetList.add(foodInfoDropDown(
-                              name, calories, fat, fibers, carbs, proteins));
-                        }
-                        setState(() {});
-                      },
-                      icon: const Icon(
-                        Icons.photo,
-                        size: 64,
-                      ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                child: Stack(
+                  children: [
+                    Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: widgetList,
+                        )
+                      ],
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          Container(
-            child: Stack(
-              children: [
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: widgetList,
-                    )
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    ));
+        ));
   }
 }
