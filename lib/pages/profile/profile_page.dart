@@ -1,5 +1,5 @@
-import 'package:defat/components/loginout_button.dart';
-import 'package:defat/components/profile_textbox.dart';
+import 'package:nufit/components/loginout_button.dart';
+import 'package:nufit/components/profile_textbox.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:defat/pages/dictionary/dictionary_page.dart';
-import 'package:defat/pages/food_detection/fd_front.dart';
-import 'package:defat/pages/meal_planner/meal_planner_page.dart';
-import 'package:defat/pages/profile/profile_page.dart';
-import 'package:defat/pages/quizz/quizz_page.dart';
+import 'package:nufit/pages/dictionary/dictionary_page.dart';
+import 'package:nufit/pages/food_detection/fd_front.dart';
+import 'package:nufit/pages/meal_planner/meal_planner_page.dart';
+import 'package:nufit/pages/profile/profile_page.dart';
+import 'package:nufit/pages/quizz/quizz_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

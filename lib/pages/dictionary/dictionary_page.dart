@@ -1,6 +1,6 @@
-import 'package:defat/components/food_tile.dart';
-import 'package:defat/models/planner.dart';
-import 'package:defat/pages/dictionary/food_details_page.dart';
+import 'package:nufit/components/food_tile.dart';
+import 'package:nufit/models/planner.dart';
+import 'package:nufit/pages/dictionary/food_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

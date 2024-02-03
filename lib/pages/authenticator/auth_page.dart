@@ -1,5 +1,5 @@
-import 'package:defat/pages/authenticator/login_or_register_page.dart';
-import 'package:defat/pages/home.dart';
+import 'package:nufit/pages/authenticator/login_or_register_page.dart';
+import 'package:nufit/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

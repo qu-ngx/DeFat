@@ -1,5 +1,5 @@
-import 'package:defat/pages/authenticator/login_page.dart';
-import 'package:defat/pages/authenticator/register_page.dart';
+import 'package:nufit/pages/authenticator/login_page.dart';
+import 'package:nufit/pages/authenticator/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginOrRegisterPage extends StatefulWidget {

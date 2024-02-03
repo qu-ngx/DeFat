@@ -1,6 +1,6 @@
-import 'package:defat/components/my_textfield.dart';
-import 'package:defat/components/loginout_button.dart';
-import 'package:defat/components/square_tile.dart';
+import 'package:nufit/components/my_textfield.dart';
+import 'package:nufit/components/loginout_button.dart';
+import 'package:nufit/components/square_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

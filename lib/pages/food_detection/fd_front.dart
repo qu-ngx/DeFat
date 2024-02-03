@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:defat/models/food.dart';
-import 'package:defat/models/planner.dart';
-import 'package:defat/pages/food_detection/fd_back.dart';
+import 'package:nufit/models/food.dart';
+import 'package:nufit/models/planner.dart';
+import 'package:nufit/pages/food_detection/fd_back.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';

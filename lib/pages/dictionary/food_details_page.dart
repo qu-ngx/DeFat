@@ -1,6 +1,6 @@
-import 'package:defat/components/button.dart';
-import 'package:defat/models/food.dart';
-import 'package:defat/models/planner.dart';
+import 'package:nufit/components/button.dart';
+import 'package:nufit/models/food.dart';
+import 'package:nufit/models/planner.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
