@@ -16,25 +16,25 @@ class _QuestionState extends State<Question> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 40.0, left: 20.0),
+              padding: const EdgeInsets.only(top: 40.0, left: 20.0),
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(6),
+                    padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(
                         color: Colors.yellow,
                         borderRadius: BorderRadius.circular(60)),
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.arrow_back,
                         color: Colors.white,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 80.0,
                   ),
-                  Text(
+                  const Text(
                     "Question 1",
                     style: TextStyle(
                         color: Colors.black,
@@ -44,14 +44,14 @@ class _QuestionState extends State<Question> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
+            const SizedBox(
+              height: 10,
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 20, right: 20),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
@@ -60,7 +60,7 @@ class _QuestionState extends State<Question> {
                   child: Column(
                     children: [
                       Padding(
-                          padding: EdgeInsets.only(top: 40),
+                          padding: const EdgeInsets.only(top: 40),
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
@@ -71,11 +71,11 @@ class _QuestionState extends State<Question> {
                               ))),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Text(
+                        child: const Text(
                           "This food is healthy",
                           style: TextStyle(
                               color: Colors.black,
@@ -83,16 +83,16 @@ class _QuestionState extends State<Question> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Text(
+                        child: const Text(
                           "This food is healthy",
                           style: TextStyle(
                               color: Colors.black,
@@ -100,16 +100,16 @@ class _QuestionState extends State<Question> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Text(
+                        child: const Text(
                           "This food is healthy",
                           style: TextStyle(
                               color: Colors.black,
@@ -117,16 +117,16 @@ class _QuestionState extends State<Question> {
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Text(
+                        child: const Text(
                           "This food is healthy",
                           style: TextStyle(
                               color: Colors.black,

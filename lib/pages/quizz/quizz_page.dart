@@ -44,7 +44,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       elevation: 5.0,
                       child: Container(
                         width: 355,
-                        padding: EdgeInsets.all(13),
+                        padding: const EdgeInsets.all(13),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.grey[100],
