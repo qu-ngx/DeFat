@@ -18,16 +18,6 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
 
   void signUserIn() async {
-    // showing loading circle
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      },
-    );
-
     // try sign in
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -36,7 +26,6 @@ class _LoginPageState extends State<LoginPage> {
     } on FirebaseAuthException catch (e) {
       // Pop the loading circles
       // ignore: use_build_context_synchronously
-      Navigator.pop(context);
       // Catch errors with messages to users
       switch (e.code) {
         case 'user-not-found':
@@ -87,11 +76,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 50),
               const Text(
-                "Welcome to DeFat.",
+                "Welcome to NuFit.",
                 style: TextStyle(color: Colors.grey, fontSize: 15),
               ),
               const Text(
-                "Ready for a fitter body and a healthier life?",
+                "Ready for a fitter body and healthier meals?",
                 style: TextStyle(color: Colors.grey, fontSize: 15),
               ),
               const SizedBox(height: 25),
