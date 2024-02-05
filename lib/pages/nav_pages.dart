@@ -1,5 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:nufit/models/question.dart';
+import 'package:nufit/pages/admin/admin_login.dart';
 import 'package:nufit/pages/dictionary/dictionary_page.dart';
 import 'package:nufit/pages/food_detection/fd_front.dart';
 import 'package:nufit/pages/meal_planner/meal_planner_page.dart';
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         MealPlannerPage(),
         FoodML(),
         DictPage(),
-        Question(),
+        AdminLogin(),
         ProfilePage(),
       ][_page],
       backgroundColor: Colors.transparent,
@@ -33,6 +33,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.transparent,
           color: Colors.yellow,
           animationDuration: const Duration(milliseconds: 300),
+          buttonBackgroundColor: Colors.yellow.shade100,
           onTap: (index) {
             setState(() {
               _page = index;

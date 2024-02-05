@@ -62,21 +62,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                             fontWeight: FontWeight.bold, fontSize: 17),
                       ),
                     )),
-                    const SizedBox(height: 100),
-                    // Button
-                    Container(
-                      padding: const EdgeInsets.all(25),
-                      child: Column(
-                        children: [
-                          MyButton(
-                            text: "Plan your meal ",
-                            onTap: () {
-                              navigateToInnerPlanner(context);
-                            },
-                          ),
-                        ],
-                      ),
-                    ),
+                    const SizedBox(height: 85),
                     Container(
                       color: Colors.transparent,
                       child: ExpansionTile(
@@ -85,6 +71,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         children: [
+                          const SizedBox(height: 30),
                           CircularPercentIndicator(
                             radius: 90,
                             lineWidth: 17,
@@ -140,7 +127,20 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 50),
+                    // Button
+                    Container(
+                      padding: const EdgeInsets.all(25),
+                      child: Column(
+                        children: [
+                          MyButton(
+                            text: "Plan your meal ",
+                            onTap: () {
+                              navigateToInnerPlanner(context);
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 )),
       ]),
