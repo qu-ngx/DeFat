@@ -20,10 +20,8 @@ class _AddQuizState extends State<AddQuiz> {
   Future getImage() async {
     var image = await _picker.pickImage(source: ImageSource.gallery);
 
-    if (selectedImage != null) {
-      selectedImage = File(image!.path);
-      setState(() {});
-    }
+    selectedImage = File(image!.path);
+    setState(() {});
   }
 
   uploadItem() async {
@@ -124,19 +122,19 @@ class _AddQuizState extends State<AddQuiz> {
                         ),
                       ),
                     )
-                  : GestureDetector(
-                      child: Center(
-                        child: Material(
-                          elevation: 4.0,
-                          borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            width: 150,
-                            height: 150,
-                            decoration: BoxDecoration(
-                              border:
-                                  Border.all(color: Colors.black, width: 1.5),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                  : Center(
+                      child: Material(
+                        elevation: 4.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          width: 150,
+                          height: 150,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1.5),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
                             child: Image.file(
                               selectedImage!,
                               fit: BoxFit.cover,
@@ -159,7 +157,7 @@ class _AddQuizState extends State<AddQuiz> {
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10)),
                 child: TextField(
-                  controller: option1controller,
+                  controller: questioncontroller,
                   decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Enter question",
