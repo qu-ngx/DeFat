@@ -27,7 +27,7 @@ class _AdminLoginState extends State<AdminLogin> {
             Container(
               margin:
                   EdgeInsets.only(top: MediaQuery.of(context).size.height / 2),
-              padding: EdgeInsets.only(top: 45, left: 20, right: 20),
+              padding: const EdgeInsets.only(top: 45, left: 20, right: 20),
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
@@ -70,9 +70,10 @@ class _AdminLoginState extends State<AdminLogin> {
                             ),
                             // Username box
                             Container(
-                              padding:
-                                  EdgeInsets.only(left: 20, top: 5, bottom: 5),
-                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              padding: const EdgeInsets.only(
+                                  left: 20, top: 5, bottom: 5),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 20),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.black),
                               ),
@@ -98,9 +99,10 @@ class _AdminLoginState extends State<AdminLogin> {
                               height: 35,
                             ),
                             Container(
-                              padding:
-                                  EdgeInsets.only(left: 20, top: 5, bottom: 5),
-                              margin: EdgeInsets.symmetric(horizontal: 20),
+                              padding: const EdgeInsets.only(
+                                  left: 20, top: 5, bottom: 5),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 20),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.black),
                               ),
@@ -160,7 +162,8 @@ class _AdminLoginState extends State<AdminLogin> {
             style: TextStyle(fontSize: 18.0),
           )));
         } else {
-          Route route = MaterialPageRoute(builder: (context) => AddQuiz());
+          Route route =
+              MaterialPageRoute(builder: (context) => const AddQuiz());
           Navigator.pushReplacement(context, route);
         }
       });
