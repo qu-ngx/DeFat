@@ -94,7 +94,32 @@ class _FoodMLState extends State<FoodML> {
                               if (result != null) {
                                 image =
                                     foodDetection!.analyseImage(result.path);
+
+                                String? label;
+                                label =
+                                    foodDetection!.getPredLabel(result.path);
+
+                                // Null handler for label
+                                if (label != null) {
+                                  Food foodItem = planner.showTheFood(label);
+
+                                  String name = foodItem.name;
+
+                                  int calories = foodItem.calories;
+
+                                  int carbs = foodItem.carbs;
+
+                                  int fibers = foodItem.fibers;
+
+                                  int fat = foodItem.fat;
+
+                                  int proteins = foodItem.proteins;
+
+                                  widgetList.add(foodInfoDropDown(name,
+                                      calories, fat, fibers, carbs, proteins));
+                                }
                                 setState(() {});
+                                widgetList.remove(0);
                               }
                             },
                             icon: const Icon(
@@ -132,8 +157,8 @@ class _FoodMLState extends State<FoodML> {
                                 widgetList.add(foodInfoDropDown(name, calories,
                                     fat, fibers, carbs, proteins));
                               }
+                              setState(() {});
                             }
-                            setState(() {});
                           },
                           icon: const Icon(
                             Icons.photo,

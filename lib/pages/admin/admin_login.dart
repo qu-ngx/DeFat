@@ -145,20 +145,14 @@ class _AdminLoginState extends State<AdminLogin> {
     );
   }
 
-  LoginAdmin() {
+  Future LoginAdmin() async {
     FirebaseFirestore.instance.collection("Admin").get().then((snapshot) {
       snapshot.docs.forEach((result) {
-        if (result.data()['id'] != usernamecontroller.text.trim()) {
+        if (result.data()['id'] != usernamecontroller.text.trim() &&
+            result.data()['password'] != usernamecontroller.text.trim()) {
           ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text(
-            "Your id is not correct",
-            style: TextStyle(fontSize: 18.0),
-          )));
-        } else if (result.data()['password'] !=
-            usernamecontroller.text.trim()) {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text(
-            "Your password is not correct",
+            "Your id or password is not correct",
             style: TextStyle(fontSize: 18.0),
           )));
         } else {

@@ -78,7 +78,6 @@ class _AddQuizState extends State<AddQuiz> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         title: const Text(
           "Add Quiz",
           style: TextStyle(

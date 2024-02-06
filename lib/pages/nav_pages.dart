@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         MealPlannerPage(),
         FoodML(),
         DictPage(),
-        AddQuiz(),
+        AdminLogin(),
         ProfilePage(),
       ][_page],
       backgroundColor: Colors.transparent,
