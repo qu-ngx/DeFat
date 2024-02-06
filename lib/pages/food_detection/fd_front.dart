@@ -113,22 +113,25 @@ class _FoodMLState extends State<FoodML> {
                               String? label;
                               label = foodDetection!.getPredLabel(result.path);
 
-                              Food foodItem = planner.showTheFood(label!);
+                              // Null handler for label
+                              if (label != null) {
+                                Food foodItem = planner.showTheFood(label);
 
-                              String name = foodItem.name;
+                                String name = foodItem.name;
 
-                              int calories = foodItem.calories;
+                                int calories = foodItem.calories;
 
-                              int carbs = foodItem.carbs;
+                                int carbs = foodItem.carbs;
 
-                              int fibers = foodItem.fibers;
+                                int fibers = foodItem.fibers;
 
-                              int fat = foodItem.fat;
+                                int fat = foodItem.fat;
 
-                              int proteins = foodItem.proteins;
+                                int proteins = foodItem.proteins;
 
-                              widgetList.add(foodInfoDropDown(name, calories,
-                                  fat, fibers, carbs, proteins));
+                                widgetList.add(foodInfoDropDown(name, calories,
+                                    fat, fibers, carbs, proteins));
+                              }
                             }
                             setState(() {});
                           },
