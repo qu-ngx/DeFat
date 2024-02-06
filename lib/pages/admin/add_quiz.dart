@@ -65,7 +65,7 @@ class _AddQuizState extends State<AddQuiz> {
 
   String? value;
   // Edit the grid of questions here
-  final List<String> quizItems = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5'];
+  final List<String> quizItems = ['Fat', 'Carbs', 'Fibers', 'Proteins'];
 
   TextEditingController questioncontroller = new TextEditingController();
   TextEditingController option1controller = new TextEditingController();

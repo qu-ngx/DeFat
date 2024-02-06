@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:nufit/models/question.dart';
 
 class QuizzPage extends StatefulWidget {
   const QuizzPage({super.key});
@@ -39,26 +41,142 @@ class _QuizzPageState extends State<QuizzPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Material(
-                      borderRadius: BorderRadius.circular(20),
-                      elevation: 5.0,
-                      child: Container(
-                        width: 355,
-                        padding: const EdgeInsets.all(13),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.grey[100],
+                    Column(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Question(category: "Fat")));
+                          },
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            elevation: 5.0,
+                            child: Container(
+                              width: 355,
+                              padding: const EdgeInsets.all(13),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[100],
+                              ),
+                              child: const Column(children: [
+                                Text(
+                                  "Lesson 1: Fat",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      backgroundColor: Colors.transparent),
+                                )
+                              ]),
+                            ),
+                          ),
                         ),
-                        child: const Column(children: [
-                          Text(
-                            "First set of questions",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                                backgroundColor: Colors.transparent),
-                          )
-                        ]),
-                      ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Question(category: "Carbs")));
+                          },
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            elevation: 5.0,
+                            child: Container(
+                              width: 355,
+                              padding: const EdgeInsets.all(13),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[100],
+                              ),
+                              child: const Column(children: [
+                                Text(
+                                  "Lesson 2: Carbs",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      backgroundColor: Colors.transparent),
+                                )
+                              ]),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Question(category: "Fibers")));
+                          },
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            elevation: 5.0,
+                            child: Container(
+                              width: 355,
+                              padding: const EdgeInsets.all(13),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[100],
+                              ),
+                              child: const Column(children: [
+                                Text(
+                                  "Lesson 3: Fibers",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      backgroundColor: Colors.transparent),
+                                )
+                              ]),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Question(category: "Proteins")));
+                          },
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20),
+                            elevation: 5.0,
+                            child: Container(
+                              width: 355,
+                              padding: const EdgeInsets.all(13),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[100],
+                              ),
+                              child: const Column(children: [
+                                Text(
+                                  "Lesson 4: Proteins",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      backgroundColor: Colors.transparent),
+                                )
+                              ]),
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
