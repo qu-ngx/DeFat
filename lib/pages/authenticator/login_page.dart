@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[100],
+      backgroundColor: Colors.white,
       body: SafeArea(
           child: Center(
         child: SingleChildScrollView(
@@ -77,11 +77,20 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 50),
               const Text(
                 "Welcome to NuFit.",
-                style: TextStyle(color: Colors.grey, fontSize: 15),
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
               ),
-              const Text(
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
                 "Ready for a fitter body and healthier meals?",
-                style: TextStyle(color: Colors.grey, fontSize: 15),
+                style: TextStyle(
+                    color: Colors.orange.shade300,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 25),
 

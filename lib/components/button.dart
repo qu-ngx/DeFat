@@ -11,7 +11,7 @@ class MyButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.yellow[300], borderRadius: BorderRadius.circular(40)),
+            color: Colors.orange[600], borderRadius: BorderRadius.circular(40)),
         padding: const EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -19,14 +19,14 @@ class MyButton extends StatelessWidget {
             Text(
               text,
               style: const TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
             // icon
             const Icon(
               Icons.arrow_forward,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ],
         ),

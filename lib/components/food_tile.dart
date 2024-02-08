@@ -12,35 +12,61 @@ class FoodTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.only(top: 30),
-        width: 450,
-        height: 300,
-        decoration: BoxDecoration(
-            color: Colors.grey[100], borderRadius: BorderRadius.circular(20)),
-        margin: const EdgeInsets.only(bottom: 5, top: 5),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 50),
-              Image.asset(
-                food.imagePath,
-                height: 100,
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: onTap,
+          child: Center(
+            child: Container(
+              padding: const EdgeInsets.only(top: 30),
+              width: 450,
+              height: 300,
+              decoration: BoxDecoration(
+                border: Border(
+                    top: BorderSide(width: 1.0, color: Colors.grey.shade500),
+                    right: BorderSide(width: 1.0, color: Colors.grey.shade500),
+                    left: BorderSide(width: 1.0, color: Colors.grey.shade500)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.6),
+                    spreadRadius: 2,
+                    blurRadius: 3,
+                    offset: const Offset(0, 6), // changes position of shadow
+                  ),
+                ],
               ),
-              const SizedBox(
-                height: 30,
+              margin: const EdgeInsets.only(bottom: 5, top: 20),
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Image.asset(
+                      food.imagePath,
+                      height: 120,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      food.name,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 25),
+                    ),
+                  ],
+                ),
               ),
-              Text(
-                food.name,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
+            ),
           ),
         ),
-      ),
+        const SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }

@@ -15,12 +15,13 @@ class SignInOutButton extends StatelessWidget {
           padding: const EdgeInsets.all(25),
           margin: const EdgeInsets.symmetric(horizontal: 25),
           decoration: BoxDecoration(
-              color: Colors.yellow, borderRadius: BorderRadius.circular(50)),
+              color: Colors.orange.shade600,
+              borderRadius: BorderRadius.circular(50)),
           child: Center(
               child: Text(
             signState,
             style: const TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
               fontSize: 15,
             ),

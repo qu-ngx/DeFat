@@ -36,7 +36,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
         automaticallyImplyLeading: false,
         title: const Text(
           "Meals",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange),
         ),
         backgroundColor: Colors.transparent,
       ),
@@ -46,23 +46,68 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(
-                      height: 70,
+                      height: 40,
                     ),
                     Center(
                         child: CircularPercentIndicator(
                       radius: 130,
                       lineWidth: 25,
                       percent: value.totalCaloriesCount() / 2500,
-                      progressColor: Colors.yellow,
-                      backgroundColor: Colors.yellow.shade100,
+                      progressColor: Colors.orange,
+                      backgroundColor: Colors.orange.shade100,
                       circularStrokeCap: CircularStrokeCap.round,
                       center: Text(
-                        "${value.totalCaloriesCount()} / 2500 calories",
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 17),
+                        "Calories:\n${value.totalCaloriesCount()} / 2500",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                            color: Colors.yellow.shade900),
                       ),
                     )),
-                    const SizedBox(height: 85),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CircularPercentIndicator(
+                          radius: 20,
+                          lineWidth: 8,
+                          progressColor: Colors.red,
+                          backgroundColor: Colors.red.shade100,
+                        ),
+                        CircularPercentIndicator(
+                          radius: 20,
+                          lineWidth: 8,
+                          progressColor: Colors.brown,
+                          backgroundColor: Colors.brown.shade100,
+                        ),
+                        CircularPercentIndicator(
+                          radius: 20,
+                          lineWidth: 8,
+                          progressColor: Colors.green,
+                          backgroundColor: Colors.green.shade100,
+                        ),
+                        CircularPercentIndicator(
+                          radius: 20,
+                          lineWidth: 8,
+                          progressColor: Colors.blue,
+                          backgroundColor: Colors.blue.shade100,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("    Fat     "),
+                        Text(" Carbs"),
+                        Text("  Fibers"),
+                        Text("Proteins")
+                      ],
+                    ),
                     Container(
                       color: Colors.transparent,
                       child: ExpansionTile(
@@ -75,8 +120,8 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                           CircularPercentIndicator(
                             radius: 90,
                             lineWidth: 17,
-                            progressColor: Colors.orange,
-                            backgroundColor: Colors.orange.shade100,
+                            progressColor: Colors.red,
+                            backgroundColor: Colors.red.shade100,
                             circularStrokeCap: CircularStrokeCap.round,
                             center: Text(
                               "   Fat \n ${value.totalFatCount()} / 50",
@@ -88,8 +133,8 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                           CircularPercentIndicator(
                             radius: 90,
                             lineWidth: 17,
-                            progressColor: Colors.red,
-                            backgroundColor: Colors.red.shade100,
+                            progressColor: Colors.brown,
+                            backgroundColor: Colors.brown.shade100,
                             circularStrokeCap: CircularStrokeCap.round,
                             center: Text(
                               " Carbs \n ${value.totalCarbsCount()} / 50",
