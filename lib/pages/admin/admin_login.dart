@@ -11,8 +11,8 @@ class AdminLogin extends StatefulWidget {
 }
 
 class _AdminLoginState extends State<AdminLogin> {
-  TextEditingController usernamecontroller = new TextEditingController();
-  TextEditingController passwordcontroller = new TextEditingController();
+  TextEditingController usernamecontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -145,8 +145,10 @@ class _AdminLoginState extends State<AdminLogin> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Future LoginAdmin() async {
     FirebaseFirestore.instance.collection("Admin").get().then((snapshot) {
+      // ignore: avoid_function_literals_in_foreach_calls
       snapshot.docs.forEach((result) {
         if (result.data()['id'] != usernamecontroller.text.trim() &&
             result.data()['password'] != usernamecontroller.text.trim()) {

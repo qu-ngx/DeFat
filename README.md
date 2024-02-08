@@ -7,7 +7,7 @@
 
 > The application uses AI technology to enrich users' knowledge on nutritions of dishes and enables them to create a suitable meal for their diets and help people lose weights.
 
-**Watch NuFit demo video here: [NuFit - GDSC Solution Challenge 2024]()**
+**Watch NuFit demo video here: [NuFit - GSC24]()**
 
 ## Project structure module
 

@@ -9,6 +9,7 @@ class DatabaseMethods {
   }
 
   Future<Stream<QuerySnapshot>> getCategoryQuiz(String category) async {
+    // ignore: await_only_futures
     return await FirebaseFirestore.instance.collection(category).snapshots();
   }
 }

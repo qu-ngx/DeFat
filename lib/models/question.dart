@@ -2,9 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:nufit/service/database.dart';
 
+// ignore: must_be_immutable
 class Question extends StatefulWidget {
   String category;
-  Question({required this.category});
+  Question({super.key, required this.category});
 
   @override
   State<Question> createState() => _QuestionState();
@@ -23,6 +24,7 @@ class _QuestionState extends State<Question> {
     super.initState();
   }
 
+  // ignore: non_constant_identifier_names
   Stream? QuizStream;
   PageController controller = PageController();
 
@@ -270,14 +272,15 @@ class _QuestionState extends State<Question> {
                               GestureDetector(
                                 onTap: () {
                                   controller.nextPage(
-                                      duration: Duration(milliseconds: 200),
+                                      duration:
+                                          const Duration(milliseconds: 200),
                                       curve: Curves.easeIn);
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Container(
-                                      padding: EdgeInsets.all(10),
+                                      padding: const EdgeInsets.all(10),
                                       decoration: BoxDecoration(
                                           border:
                                               Border.all(color: Colors.black),
@@ -305,44 +308,42 @@ class _QuestionState extends State<Question> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellowAccent,
-      body: Container(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 40.0, left: 20.0),
-              child: Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(6),
-                    decoration: BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(60)),
-                    child: const Center(
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 40.0, left: 20.0),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(60)),
+                  child: const Center(
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
                     ),
                   ),
-                  const SizedBox(
-                    width: 80.0,
-                  ),
-                  Text(
-                    widget.category,
-                    style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
-              ),
+                ),
+                const SizedBox(
+                  width: 80.0,
+                ),
+                Text(
+                  widget.category,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Expanded(child: allQuiz()),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(child: allQuiz()),
+        ],
       ),
     );
   }

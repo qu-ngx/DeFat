@@ -119,7 +119,6 @@ class _FoodMLState extends State<FoodML> {
                                       calories, fat, fibers, carbs, proteins));
                                 }
                                 setState(() {});
-                                widgetList.remove(0);
                               }
                             },
                             icon: const Icon(

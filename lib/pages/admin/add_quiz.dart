@@ -65,12 +65,13 @@ class _AddQuizState extends State<AddQuiz> {
   // Edit the grid of questions here
   final List<String> quizItems = ['Fat', 'Carbs', 'Fibers', 'Proteins'];
 
-  TextEditingController questioncontroller = new TextEditingController();
-  TextEditingController option1controller = new TextEditingController();
-  TextEditingController option2controller = new TextEditingController();
-  TextEditingController option3controller = new TextEditingController();
-  TextEditingController option4controller = new TextEditingController();
-  TextEditingController optionCorrectController = new TextEditingController();
+  // Does not to init need new because it automatically creates a new instance when called
+  TextEditingController questioncontroller = TextEditingController();
+  TextEditingController option1controller = TextEditingController();
+  TextEditingController option2controller = TextEditingController();
+  TextEditingController option3controller = TextEditingController();
+  TextEditingController option4controller = TextEditingController();
+  TextEditingController optionCorrectController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,4 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:nufit/pages/admin/add_quiz.dart';
-import 'package:nufit/pages/admin/admin_login.dart';
 import 'package:nufit/pages/dictionary/dictionary_page.dart';
 import 'package:nufit/pages/food_detection/fd_front.dart';
 import 'package:nufit/pages/meal_planner/meal_planner_page.dart';
