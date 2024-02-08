@@ -30,28 +30,41 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.transparent,
       bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.transparent,
-          color: Colors.yellow,
+          color: Colors.orange,
           animationDuration: const Duration(milliseconds: 300),
-          buttonBackgroundColor: Colors.yellow.shade100,
+          buttonBackgroundColor: Colors.orange.shade100,
           onTap: (index) {
             setState(() {
               _page = index;
             });
           },
           items: [
-            const Icon(
+            Icon(
               Icons.dinner_dining_sharp,
               size: 30,
+              color: Colors.grey.shade600,
             ),
-            Image.asset('assets/icons/home_camera.png', width: 30, height: 30),
-            Image.asset('assets/icons/dictionary.png', width: 33, height: 33),
-            const Icon(
+            Image.asset(
+              'assets/icons/home_camera.png',
+              width: 30,
+              height: 30,
+              color: Colors.grey.shade600,
+            ),
+            Image.asset(
+              'assets/icons/dictionary.png',
+              width: 33,
+              height: 33,
+              color: Colors.grey.shade600,
+            ),
+            Icon(
               Icons.quiz_outlined,
               size: 30,
+              color: Colors.grey.shade600,
             ),
-            const Icon(
+            Icon(
               Icons.person,
               size: 30,
+              color: Colors.grey.shade600,
             ),
           ]),
 

@@ -36,7 +36,8 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
         automaticallyImplyLeading: false,
         title: const Text(
           "Meals",
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.orange),
+          style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.orange, fontSize: 25),
         ),
         backgroundColor: Colors.transparent,
       ),
@@ -65,7 +66,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       ),
                     )),
                     const SizedBox(
-                      height: 50,
+                      height: 40,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -102,18 +103,39 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text("    Fat     "),
-                        Text(" Carbs"),
-                        Text("  Fibers"),
-                        Text("Proteins")
+                        Text(
+                          "     Fat     ",
+                          style: TextStyle(
+                              color: Colors.red, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          " Carbs",
+                          style: TextStyle(
+                              color: Colors.brown, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "  Fibers",
+                          style: TextStyle(
+                              color: Colors.green, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Proteins",
+                          style: TextStyle(
+                              color: Colors.blue, fontWeight: FontWeight.bold),
+                        )
                       ],
+                    ),
+                    const SizedBox(
+                      height: 15,
                     ),
                     Container(
                       color: Colors.transparent,
                       child: ExpansionTile(
-                        title: const Text(
+                        title: Text(
                           'View all nutritions in your meals',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey.shade700),
                         ),
                         children: [
                           const SizedBox(height: 30),
