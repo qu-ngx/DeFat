@@ -30,8 +30,8 @@ class _FoodMLState extends State<FoodML> {
       String name, int calories, int fat, int fibers, int carbs, int proteins) {
     return Container(
       color: Colors.transparent,
-      height: 125,
-      width: 370,
+      height: 115,
+      width: 325,
       child: Column(children: [
         Expanded(
           child: ExpansionTile(
@@ -63,14 +63,20 @@ class _FoodMLState extends State<FoodML> {
   Widget build(BuildContext context) {
     final planner = context.read<Planner>();
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: const Text(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Center(
+          child: Text(
             "AI Food Camera",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.orange,
+                fontSize: 25),
           ),
         ),
-        body: SafeArea(
+      ),
+      body: SafeArea(
+        child: Expanded(
           child: Stack(
             children: [
               Column(
@@ -81,12 +87,17 @@ class _FoodMLState extends State<FoodML> {
                           (image != null) ? Image.memory(image!) : Container(),
                     ),
                   ),
-                  SizedBox(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        if (Platform.isAndroid || Platform.isIOS)
-                          IconButton(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      if (Platform.isAndroid || Platform.isIOS)
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 15, top: 15),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.orange.shade300,
+                          ),
+                          child: IconButton(
                             onPressed: () async {
                               final result = await imagePicker.pickImage(
                                 source: ImageSource.camera,
@@ -124,9 +135,17 @@ class _FoodMLState extends State<FoodML> {
                             icon: const Icon(
                               Icons.camera,
                               size: 64,
+                              color: Colors.white,
                             ),
+                            iconSize: 30,
                           ),
-                        IconButton(
+                        ),
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.orange.shade300,
+                        ),
+                        child: IconButton(
                           onPressed: () async {
                             final result = await imagePicker.pickImage(
                               source: ImageSource.gallery,
@@ -162,29 +181,31 @@ class _FoodMLState extends State<FoodML> {
                           icon: const Icon(
                             Icons.photo,
                             size: 64,
+                            color: Colors.white,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              Container(
-                child: Stack(
-                  children: [
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: widgetList,
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+              Stack(
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: widgetList,
+                      )
+                    ],
+                  ),
+                ],
               ),
+              const Padding(padding: EdgeInsets.only(bottom: 50)),
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

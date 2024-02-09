@@ -14,10 +14,14 @@ class _QuizzPageState extends State<QuizzPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          "Quizz",
-          style: TextStyle(
-              color: Colors.orange, fontWeight: FontWeight.bold, fontSize: 25),
+        title: const Center(
+          child: Text(
+            "Quizz",
+            style: TextStyle(
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+                fontSize: 25),
+          ),
         ),
         backgroundColor: Colors.white,
         elevation: 0,

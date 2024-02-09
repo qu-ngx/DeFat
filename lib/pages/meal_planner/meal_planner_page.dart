@@ -34,10 +34,14 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          "Meals",
-          style: TextStyle(
-              fontWeight: FontWeight.bold, color: Colors.orange, fontSize: 25),
+        title: const Center(
+          child: Text(
+            "Meals",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.orange,
+                fontSize: 25),
+          ),
         ),
         backgroundColor: Colors.transparent,
       ),
