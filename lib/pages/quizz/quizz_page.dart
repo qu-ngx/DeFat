@@ -51,10 +51,17 @@ class _QuizzPageState extends State<QuizzPage> {
               // First box for the first question
               Padding(
                 padding: EdgeInsets.only(left: 16, right: 16),
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Column(
+                    ExpansionTile(
+                      title: Text(
+                        "Easy - Basic Nutritions",
+                        style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
                       children: [
                         QuizCard(
                             category: "Fat",
@@ -81,8 +88,47 @@ class _QuizzPageState extends State<QuizzPage> {
                             category: "Proteins",
                             title: "Lesson 4: Fibers",
                             colors: Colors.green),
+                        SizedBox(
+                          height: 10,
+                        ),
                       ],
-                    )
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ExpansionTile(
+                      title: Text(
+                        "Medium - Build a balance meal",
+                        style: TextStyle(
+                            color: Colors.orange,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      children: [
+                        Text(
+                          "Coming Soon!",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ExpansionTile(
+                      title: Text(
+                        "Hard - Meal build for personal goals",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      children: [
+                        Text(
+                          "Coming Soon!",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               )
