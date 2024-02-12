@@ -20,7 +20,13 @@ class InnerMealPlanner extends StatelessWidget {
     return Consumer<Planner>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(
-          title: const Text("See what is in your meal!"),
+          iconTheme: const IconThemeData(
+            color: Colors.orange,
+          ),
+          title: const Text(
+            "See what is in your meal!",
+            style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+          ),
           backgroundColor: Colors.white,
         ),
         body: ListView.builder(
@@ -62,7 +68,11 @@ class InnerMealPlanner extends StatelessWidget {
                   "Calories: $foodCalories\nCarbs: $foodCarbs\nFat: $foodFat\nFibers: $foodFibers\nProteins: $foodProteins",
                 ),
                 trailing: IconButton(
-                    icon: const Icon(Icons.remove),
+                    icon: const Icon(
+                      Icons.highlight_remove_sharp,
+                      size: 40,
+                      color: Colors.red,
+                    ),
                     onPressed: () {
                       removeFromMealPlanner(food, context);
                       // THIS MUST BE IMPORTANT ONE

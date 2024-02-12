@@ -28,12 +28,11 @@ class _FoodMLState extends State<FoodML> {
 
   Widget foodInfoDropDown(
       String name, int calories, int fat, int fibers, int carbs, int proteins) {
-    return Container(
-      color: Colors.transparent,
-      height: 115,
-      width: 325,
-      child: Column(children: [
-        Expanded(
+    return Expanded(
+      child: Container(
+        height: 120,
+        color: Colors.transparent,
+        child: Expanded(
           child: ExpansionTile(
             title: Text(
               'Food detected: $name',
@@ -48,8 +47,8 @@ class _FoodMLState extends State<FoodML> {
                   )),
             ],
           ),
-        )
-      ]),
+        ),
+      ),
     );
   }
 
