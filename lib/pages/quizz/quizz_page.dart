@@ -30,12 +30,12 @@ class _QuizzPageState extends State<QuizzPage> {
       body: SingleChildScrollView(
         child: Container(
           alignment: Alignment.center,
-          child: const Column(
+          child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(left: 20),
                 child: Text(
                   "Ready to brush up your knowledge on food?",
@@ -45,16 +45,29 @@ class _QuizzPageState extends State<QuizzPage> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              // First box for the first question
               Padding(
-                padding: EdgeInsets.only(left: 16, right: 16),
+                padding: const EdgeInsets.only(left: 16, right: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ExpansionTile(
+                    Container(
+                      width: 340,
+                      height: 230,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                            image: AssetImage("assets/images/dict_1.jpeg"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const ExpansionTile(
                       title: Text(
                         "Easy - Basic Nutritions",
                         style: TextStyle(
@@ -93,15 +106,27 @@ class _QuizzPageState extends State<QuizzPage> {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 30,
+                    const Text(
+                      "-----------------------------------------",
+                      style: TextStyle(fontSize: 30),
                     ),
-                    ExpansionTile(
+                    Container(
+                      width: 350,
+                      height: 230,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                            image: AssetImage("assets/images/dict_2.jpeg"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    const ExpansionTile(
                       title: Text(
-                        "Medium - Build a balance meal",
+                        "Medium - Balance Meals",
                         style: TextStyle(
                             color: Colors.orange,
-                            fontSize: 25,
+                            fontSize: 23,
                             fontWeight: FontWeight.bold),
                       ),
                       children: [
@@ -111,15 +136,27 @@ class _QuizzPageState extends State<QuizzPage> {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 30,
+                    const Text(
+                      "-----------------------------------------",
+                      style: TextStyle(fontSize: 30),
                     ),
-                    ExpansionTile(
+                    Container(
+                      width: 340,
+                      height: 230,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(20),
+                        image: const DecorationImage(
+                            image: AssetImage("assets/images/dict_3.jpeg"),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    const ExpansionTile(
                       title: Text(
-                        "Hard - Meal build for personal goals",
+                        "Hard - Meals For Personal Goals",
                         style: TextStyle(
                             color: Colors.red,
-                            fontSize: 25,
+                            fontSize: 23,
                             fontWeight: FontWeight.bold),
                       ),
                       children: [
