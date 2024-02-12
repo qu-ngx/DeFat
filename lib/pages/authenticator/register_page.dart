@@ -3,6 +3,7 @@ import 'package:nufit/components/loginout_button.dart';
 import 'package:nufit/components/square_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:nufit/services/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -180,9 +181,13 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(height: 25),
               // Google sign in symbol (to be added features)
 
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [SquareTile(imagePath: 'assets/icons/google.png')],
+                children: [
+                  SquareTile(
+                      onTap: () => AuthService().signInWithGoogle(),
+                      imagePath: 'assets/icons/google.png')
+                ],
               ),
               const SizedBox(height: 30),
 

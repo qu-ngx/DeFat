@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:nufit/service/database.dart';
+import 'package:nufit/services/database.dart';
 import 'package:random_string/random_string.dart';
 
 class AddQuiz extends StatefulWidget {

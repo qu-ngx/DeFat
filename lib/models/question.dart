@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:nufit/service/database.dart';
+import 'package:nufit/services/database.dart';
 
 // ignore: must_be_immutable
 class Question extends StatefulWidget {
