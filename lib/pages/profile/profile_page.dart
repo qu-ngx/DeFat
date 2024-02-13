@@ -1,3 +1,4 @@
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:nufit/components/loginout_button.dart';
 import 'package:nufit/components/profile_textbox.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,6 +13,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   void signUserOut() {
     FirebaseAuth.instance.signOut();
+    GoogleSignIn().disconnect();
   }
 
   // Get the current user
