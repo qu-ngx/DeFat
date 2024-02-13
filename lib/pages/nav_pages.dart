@@ -22,53 +22,67 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          selectedPage.jumpToPage(2);
-        },
-        backgroundColor: Colors.orange,
-        child: Image.asset(
-          'assets/icons/home_camera.png',
-          width: 30,
-          height: 30,
-          color: Colors.grey.shade600,
+      backgroundColor: Colors.white,
+      floatingActionButton: SizedBox(
+        height: 70,
+        width: 70,
+        child: FloatingActionButton(
+          tooltip: "AI Camera",
+          shape: const CircleBorder(),
+          foregroundColor: Colors.transparent,
+          onPressed: () {
+            selectedPage.jumpToPage(2);
+          },
+          elevation: 1,
+          backgroundColor: Colors.orange.shade200,
+          child: Image.asset(
+            'assets/icons/home_camera.png',
+            width: 32,
+            height: 32,
+            color: Colors.white,
+          ),
         ),
       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        shape: const CircularNotchedRectangle(),
         elevation: 5.0,
-        child: Row(children: [
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
-            iconSize: 30,
+            iconSize: 34,
             onPressed: () {
               selectedPage.jumpToPage(0);
             },
             icon: Icon(
               Icons.dinner_dining_sharp,
-              color: Colors.grey.shade600,
+              color: Colors.orange.shade600,
             ),
           ),
           IconButton(
-            iconSize: 30,
+            iconSize: 20,
             onPressed: () {
               selectedPage.jumpToPage(1);
             },
             icon: Image.asset(
               'assets/icons/dictionary.png',
-              color: Colors.grey.shade600,
+              color: Colors.orange.shade600,
             ),
           ),
+          const SizedBox(
+            width: 35,
+          ),
           IconButton(
-            iconSize: 30,
+            iconSize: 33,
             onPressed: () {
               selectedPage.jumpToPage(3);
             },
             icon: Icon(
               Icons.quiz_outlined,
-              size: 30,
-              color: Colors.grey.shade600,
+              size: 33,
+              color: Colors.orange.shade600,
             ),
           ),
           IconButton(
@@ -79,7 +93,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.person,
               size: 30,
-              color: Colors.grey.shade600,
+              color: Colors.orange.shade600,
             ),
           ),
         ]),
