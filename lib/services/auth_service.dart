@@ -12,6 +12,7 @@ class AuthService {
 
       // sign user in
       return await FirebaseAuth.instance.signInWithCredential(credential);
+      // ignore: empty_catches
     } catch (e) {}
   }
 }

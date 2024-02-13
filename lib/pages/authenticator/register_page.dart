@@ -19,16 +19,6 @@ class _RegisterPageState extends State<RegisterPage> {
   final confirmPasswordController = TextEditingController();
 
   void signUserUp() async {
-    // showing loading circle
-    showDialog(
-      context: context,
-      builder: (context) {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      },
-    );
-
     // try creating new user
     try {
       if (passwordController.text == confirmPasswordController.text) {
@@ -41,7 +31,6 @@ class _RegisterPageState extends State<RegisterPage> {
 
       // try creating the user
       // ignore: use_build_context_synchronously
-      Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       // Pop the loading circles
       // ignore: use_build_context_synchronously
