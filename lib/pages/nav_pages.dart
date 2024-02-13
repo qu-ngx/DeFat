@@ -27,73 +27,74 @@ class _HomePageState extends State<HomePage> {
         height: 70,
         width: 70,
         child: FloatingActionButton(
-          tooltip: "AI Camera",
-          shape: const CircleBorder(),
-          foregroundColor: Colors.transparent,
-          onPressed: () {
-            selectedPage.jumpToPage(2);
-          },
-          elevation: 1,
-          backgroundColor: Colors.orange.shade200,
-          child: Image.asset(
-            'assets/icons/home_camera.png',
-            width: 32,
-            height: 32,
-            color: Colors.white,
-          ),
-        ),
+            tooltip: "AI Camera",
+            shape: const CircleBorder(),
+            onPressed: () {
+              selectedPage.jumpToPage(2);
+            },
+            elevation: 1,
+            backgroundColor: Colors.orange.shade200,
+            child: const Icon(
+              Icons.camera_alt_outlined,
+              size: 40,
+              color: Colors.white,
+            )),
       ),
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
+        color: Colors.orange,
         shape: const CircularNotchedRectangle(),
         elevation: 5.0,
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
+            isSelected: true,
             iconSize: 34,
             onPressed: () {
               selectedPage.jumpToPage(0);
             },
-            icon: Icon(
-              Icons.dinner_dining_sharp,
-              color: Colors.orange.shade600,
+            icon: Image.asset(
+              'assets/icons/meals.png',
+              color: Colors.white,
             ),
           ),
           IconButton(
+            isSelected: true,
             iconSize: 20,
             onPressed: () {
               selectedPage.jumpToPage(1);
             },
             icon: Image.asset(
-              'assets/icons/dictionary.png',
-              color: Colors.orange.shade600,
+              'assets/icons/book.png',
+              color: Colors.white,
             ),
           ),
           const SizedBox(
             width: 35,
           ),
           IconButton(
-            iconSize: 33,
+            isSelected: true,
+            iconSize: 35,
             onPressed: () {
               selectedPage.jumpToPage(3);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.quiz_outlined,
               size: 33,
-              color: Colors.orange.shade600,
+              color: Colors.white,
             ),
           ),
           IconButton(
+            isSelected: true,
             iconSize: 30,
             onPressed: () {
               selectedPage.jumpToPage(4);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.person,
               size: 30,
-              color: Colors.orange.shade600,
+              color: Colors.white,
             ),
           ),
         ]),
