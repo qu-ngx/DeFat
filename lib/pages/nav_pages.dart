@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   // final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   PageController selectedPage = PageController(initialPage: 0);
+  int currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +32,7 @@ class _HomePageState extends State<HomePage> {
             shape: const CircleBorder(),
             onPressed: () {
               selectedPage.jumpToPage(2);
+              currentPage = 2;
             },
             elevation: 1,
             backgroundColor: Colors.orange.shade200,
@@ -49,51 +51,55 @@ class _HomePageState extends State<HomePage> {
         elevation: 5.0,
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(
-            isSelected: true,
-            iconSize: 34,
+            iconSize: 80,
+            selectedIcon: Image.asset(
+              'assets/icons/s_meals.png',
+              color: Colors.white,
+              height: 200,
+            ),
             onPressed: () {
               selectedPage.jumpToPage(0);
+              currentPage = 0;
             },
             icon: Image.asset(
               'assets/icons/meals.png',
               color: Colors.white,
+              height: 200,
             ),
           ),
           IconButton(
-            isSelected: true,
-            iconSize: 20,
+            iconSize: 15,
             onPressed: () {
               selectedPage.jumpToPage(1);
             },
             icon: Image.asset(
               'assets/icons/book.png',
               color: Colors.white,
+              height: 34,
             ),
           ),
           const SizedBox(
-            width: 35,
+            width: 90,
           ),
           IconButton(
-            isSelected: true,
-            iconSize: 35,
+            iconSize: 33,
             onPressed: () {
               selectedPage.jumpToPage(3);
             },
             icon: const Icon(
               Icons.quiz_outlined,
-              size: 33,
+              size: 36,
               color: Colors.white,
             ),
           ),
           IconButton(
-            isSelected: true,
-            iconSize: 30,
+            iconSize: 33,
             onPressed: () {
               selectedPage.jumpToPage(4);
             },
             icon: const Icon(
               Icons.person,
-              size: 30,
+              size: 33,
               color: Colors.white,
             ),
           ),

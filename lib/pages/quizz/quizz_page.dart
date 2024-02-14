@@ -35,15 +35,12 @@ class _QuizzPageState extends State<QuizzPage> {
               const SizedBox(
                 height: 30,
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: Text(
-                  "Ready to brush up your knowledge on food?",
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 19,
-                      fontWeight: FontWeight.bold),
-                ),
+              const Text(
+                "Ready to learn more about on your food?",
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 40,
@@ -106,9 +103,8 @@ class _QuizzPageState extends State<QuizzPage> {
                         ),
                       ],
                     ),
-                    const Text(
-                      "-----------------------------------------",
-                      style: TextStyle(fontSize: 30),
+                    const SizedBox(
+                      height: 30,
                     ),
                     Container(
                       width: 350,
@@ -136,9 +132,8 @@ class _QuizzPageState extends State<QuizzPage> {
                         ),
                       ],
                     ),
-                    const Text(
-                      "-----------------------------------------",
-                      style: TextStyle(fontSize: 30),
+                    const SizedBox(
+                      height: 30,
                     ),
                     Container(
                       width: 340,
@@ -165,6 +160,9 @@ class _QuizzPageState extends State<QuizzPage> {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ],
+                    ),
+                    const SizedBox(
+                      height: 30,
                     ),
                   ],
                 ),

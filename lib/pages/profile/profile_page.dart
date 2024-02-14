@@ -30,9 +30,14 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          "Profile",
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: const Center(
+          child: Text(
+            "Profile",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Colors.orange),
+          ),
         ),
         backgroundColor: Colors.transparent,
       ),
@@ -41,9 +46,10 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(height: 50),
 
           // Profile picture of the current user
-          const Icon(
-            Icons.person,
-            size: 72,
+          Image.asset(
+            "assets/logo/gdsc-logo.jpeg",
+            width: 85,
+            height: 85,
           ),
 
           const SizedBox(height: 10),
@@ -63,24 +69,26 @@ class _ProfilePageState extends State<ProfilePage> {
             padding: EdgeInsets.only(left: 25.0),
             child: Text(
               'My details',
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.orange,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
             ),
           ),
 
           // username
           MyTextBox(
-              text: 'None',
-              sectionName: 'username',
+              text: 'GDSC @ DePauw University',
+              sectionName: 'Username',
               onPressed: () => editField('username')),
 
           // bio
           MyTextBox(
-              text: 'None',
-              sectionName: 'bio',
+              text: 'Google Developer Student Club DePauw Chapter',
+              sectionName: 'Bio',
               onPressed: () => editField('username')),
 
-          const SizedBox(height: 70),
+          const SizedBox(height: 50),
 
           SignInOutButton(signState: "Sign Out", onTap: signUserOut)
         ],
