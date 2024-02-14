@@ -32,13 +32,10 @@ class _QuizzPageState extends State<QuizzPage> {
           alignment: Alignment.center,
           child: Column(
             children: [
-              const SizedBox(
-                height: 30,
-              ),
               const Text(
                 "Ready to learn more about on your food?",
                 style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.orange,
                     fontSize: 19,
                     fontWeight: FontWeight.bold),
               ),
@@ -96,7 +93,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         ),
                         QuizCard(
                             category: "Proteins",
-                            title: "Lesson 4: Fibers",
+                            title: "Lesson 4: Proteins",
                             colors: Colors.green),
                         SizedBox(
                           height: 10,
@@ -162,7 +159,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       ],
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 50,
                     ),
                   ],
                 ),

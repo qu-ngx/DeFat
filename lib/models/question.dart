@@ -307,36 +307,31 @@ class _QuestionState extends State<Question> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: Colors.orangeAccent,
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white, size: 30),
+        backgroundColor: Colors.orangeAccent,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 83.0),
+          child: Column(
+            children: [
+              Text(
+                widget.category,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 40.0, left: 20.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0),
             child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow,
-                      borderRadius: BorderRadius.circular(60)),
-                  child: const Center(
-                    child: Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  width: 80.0,
-                ),
-                Text(
-                  widget.category,
-                  style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold),
-                )
-              ],
+              children: [],
             ),
           ),
           const SizedBox(
