@@ -1,6 +1,9 @@
 import 'dart:io';
+import 'package:nufit/components/button.dart';
+import 'package:nufit/components/food_tile.dart';
 import 'package:nufit/models/food.dart';
 import 'package:nufit/models/planner.dart';
+import 'package:nufit/pages/dictionary/food_details_page.dart';
 import 'package:nufit/pages/food_detection/fd_back.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
@@ -26,11 +29,26 @@ class _FoodMLState extends State<FoodML> {
 
   // Replace the according food name widget with a more detailed information one
 
-  Widget foodInfoDropDown(
-      String name, int calories, int fat, int fibers, int carbs, int proteins) {
+  void navigateToFoodDetails(String? label) {
+    // Access the models of food
+    final planner = context.read<Planner>();
+    final foodList = planner.foodList;
+    int? index = planner.getFoodIndex(label);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FoodDetailsPage(
+          food: foodList[index!],
+        ),
+      ),
+    );
+  }
+
+  Widget foodInfoDropDown(String label, String name, int calories, int fat,
+      int fibers, int carbs, int proteins) {
     return Expanded(
       child: Container(
-        height: 120,
+        height: 515,
         color: Colors.transparent,
         child: Expanded(
           child: ExpansionTile(
@@ -45,6 +63,14 @@ class _FoodMLState extends State<FoodML> {
                     "Cal: $calories Fat: $fat Fib: $fibers Carb: $carbs Prot: $proteins",
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   )),
+              const SizedBox(
+                height: 300,
+              ),
+              MyButton(
+                  text: "Check $name in Foodpedia",
+                  onTap: () {
+                    navigateToFoodDetails(label);
+                  })
             ],
           ),
         ),
@@ -129,8 +155,8 @@ class _FoodMLState extends State<FoodML> {
                                   if (widgetList.isNotEmpty) {
                                     widgetList.removeAt(0);
                                   }
-                                  foodInfoDropDown(name, calories, fat, fibers,
-                                      carbs, proteins);
+                                  foodInfoDropDown(label, name, calories, fat,
+                                      fibers, carbs, proteins);
                                 }
                                 setState(() {});
                               }
@@ -177,8 +203,8 @@ class _FoodMLState extends State<FoodML> {
                                 if (widgetList.isNotEmpty) {
                                   widgetList.removeAt(0);
                                 }
-                                widgetList.add(foodInfoDropDown(name, calories,
-                                    fat, fibers, carbs, proteins));
+                                widgetList.add(foodInfoDropDown(label, name,
+                                    calories, fat, fibers, carbs, proteins));
                               }
                               setState(() {});
                             }

@@ -140,6 +140,14 @@ class Planner extends ChangeNotifier {
     return totalFibers;
   }
 
+  int? getFoodIndex(String? label) {
+    for (int i = 0; i < _foodList.length; i++) {
+      if (label == _foodList[i].label) {
+        return i;
+      }
+    }
+  }
+
   // Show the Food in AI camera
   showTheFood(String? label) {
     for (int i = 0; i < _foodList.length; i++) {
