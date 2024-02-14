@@ -35,7 +35,7 @@ class _QuizzPageState extends State<QuizzPage> {
               const Text(
                 "Ready to learn more about on your food?",
                 style: TextStyle(
-                    color: Colors.orange,
+                    color: Colors.grey,
                     fontSize: 19,
                     fontWeight: FontWeight.bold),
               ),

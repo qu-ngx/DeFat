@@ -125,8 +125,12 @@ class _FoodMLState extends State<FoodML> {
 
                                   int proteins = foodItem.proteins;
 
-                                  widgetList.add(foodInfoDropDown(name,
-                                      calories, fat, fibers, carbs, proteins));
+                                  // Removed the first widget list from the widgetlist if widgetlist is non-empty
+                                  if (widgetList.isNotEmpty) {
+                                    widgetList.removeAt(0);
+                                  }
+                                  foodInfoDropDown(name, calories, fat, fibers,
+                                      carbs, proteins);
                                 }
                                 setState(() {});
                               }
@@ -170,7 +174,9 @@ class _FoodMLState extends State<FoodML> {
                                 int fat = foodItem.fat;
 
                                 int proteins = foodItem.proteins;
-
+                                if (widgetList.isNotEmpty) {
+                                  widgetList.removeAt(0);
+                                }
                                 widgetList.add(foodInfoDropDown(name, calories,
                                     fat, fibers, carbs, proteins));
                               }
@@ -193,9 +199,8 @@ class _FoodMLState extends State<FoodML> {
                   Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: widgetList,
-                      )
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: widgetList),
                     ],
                   ),
                 ],

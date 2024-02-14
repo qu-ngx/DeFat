@@ -52,7 +52,20 @@ class _ProfilePageState extends State<ProfilePage> {
             height: 85,
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(
+            height: 10,
+          ),
+
+          Text(
+            "GDSC-DPU",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.yellow.shade600,
+                fontSize: 28,
+                fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 1),
 
           // Show user's email
           Text(
@@ -62,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.black, fontWeight: FontWeight.bold),
           ),
 
-          const SizedBox(height: 50),
+          const SizedBox(height: 15),
 
           // user details
           const Padding(
@@ -90,7 +103,11 @@ class _ProfilePageState extends State<ProfilePage> {
 
           const SizedBox(height: 50),
 
-          SignInOutButton(signState: "Sign Out", onTap: signUserOut)
+          SignInOutButton(signState: "Sign Out", onTap: signUserOut),
+
+          const SizedBox(
+            height: 30,
+          )
         ],
       ),
     );
