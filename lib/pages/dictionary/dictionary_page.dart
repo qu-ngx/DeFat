@@ -69,13 +69,21 @@ class _DictPageState extends State<DictPage> {
             height: 30,
           ),
 
+          const Padding(
+            padding: EdgeInsets.only(right: 230),
+            child: Text(
+              "Search for food: ",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+
           // search bar
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
             child: TextField(
               decoration: InputDecoration(
-                labelText: "Search for your food",
+                labelText: "Enter food name",
                 labelStyle: const TextStyle(fontWeight: FontWeight.w200),
                 focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.orange),

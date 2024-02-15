@@ -64,30 +64,30 @@ class _QuizzPageState extends State<QuizzPage> {
                       ),
                       children: [
                         QuizCard(
-                            category: "Fat",
-                            title: "Lesson 1: Fat",
-                            colors: Colors.green),
+                          category: "Fat",
+                          title: "Lesson 1: Fat",
+                        ),
                         SizedBox(
                           height: 15,
                         ),
                         QuizCard(
-                            category: "Carbs",
-                            title: "Lesson 2: Carbs",
-                            colors: Colors.green),
+                          category: "Carbs",
+                          title: "Lesson 2: Carbs",
+                        ),
                         SizedBox(
                           height: 15,
                         ),
                         QuizCard(
-                            category: "Fibers",
-                            title: "Lesson 3: Fibers",
-                            colors: Colors.green),
+                          category: "Fibers",
+                          title: "Lesson 3: Fibers",
+                        ),
                         SizedBox(
                           height: 15,
                         ),
                         QuizCard(
-                            category: "Proteins",
-                            title: "Lesson 4: Proteins",
-                            colors: Colors.green),
+                          category: "Proteins",
+                          title: "Lesson 4: Proteins",
+                        ),
                         SizedBox(
                           height: 10,
                         ),
@@ -152,7 +152,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       ],
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 150,
                     ),
                   ],
                 ),

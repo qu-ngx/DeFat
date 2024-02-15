@@ -5,12 +5,12 @@ class QuizCard extends StatefulWidget {
   final String category;
   final String title;
   // ignore: prefer_typing_uninitialized_variables
-  final colors;
-  const QuizCard(
-      {super.key,
-      required this.category,
-      required this.title,
-      required this.colors});
+
+  const QuizCard({
+    super.key,
+    required this.category,
+    required this.title,
+  });
 
   @override
   State<QuizCard> createState() => _QuizCardState();
@@ -30,12 +30,12 @@ class _QuizCardState extends State<QuizCard> {
         borderRadius: BorderRadius.circular(20),
         elevation: 5.0,
         child: Container(
-          width: 355,
-          height: 90,
+          width: 340,
+          height: 85,
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: Colors.grey[100],
+            color: Colors.orange.shade200,
           ),
           child: Column(children: [
             Padding(
@@ -43,8 +43,8 @@ class _QuizCardState extends State<QuizCard> {
               child: Text(
                 widget.title,
                 textAlign: TextAlign.start,
-                style: TextStyle(
-                    color: widget.colors,
+                style: const TextStyle(
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     backgroundColor: Colors.transparent),
