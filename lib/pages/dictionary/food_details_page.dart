@@ -102,7 +102,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       const SizedBox(width: 25),
                       Icon(
                         Icons.food_bank,
-                        color: Colors.yellow[800],
+                        color: Colors.orange.shade200,
                       ),
 
                       const SizedBox(
@@ -158,7 +158,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
           // Bar to add the following food to the meal planner
           Container(
-            color: Colors.yellow[700],
+            color: Colors.orange.shade600,
             padding: const EdgeInsets.all(25),
             child: Column(
               children: [
@@ -173,26 +173,24 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
-
                     // quantity
                     Row(
                       children: [
                         // substract quantity from tempo meal planner
                         Container(
-                          decoration: BoxDecoration(
-                              color: Colors.yellow[500],
-                              shape: BoxShape.circle),
+                          decoration: const BoxDecoration(
+                              color: Colors.red, shape: BoxShape.circle),
                           child: IconButton(
                             icon: const Icon(
                               Icons.remove,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             onPressed: decrementQuantity,
                           ),
                         ),
 
                         SizedBox(
-                          width: 40,
+                          width: 55,
                           child: Center(
                             child: Text(
                               (quantityCount * widget.food.calories).toString(),
@@ -205,13 +203,12 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                         ),
 
                         Container(
-                          decoration: BoxDecoration(
-                              color: Colors.yellow[500],
-                              shape: BoxShape.circle),
+                          decoration: const BoxDecoration(
+                              color: Colors.green, shape: BoxShape.circle),
                           child: IconButton(
                             icon: const Icon(
                               Icons.add,
-                              color: Colors.black,
+                              color: Colors.white,
                             ),
                             onPressed: incrementQuantity,
                           ),
