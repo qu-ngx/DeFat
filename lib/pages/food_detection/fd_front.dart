@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:nufit/components/button.dart';
-import 'package:nufit/components/food_tile.dart';
 import 'package:nufit/models/food.dart';
 import 'package:nufit/models/planner.dart';
 import 'package:nufit/pages/dictionary/food_details_page.dart';
@@ -64,13 +63,21 @@ class _FoodMLState extends State<FoodML> {
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   )),
               const SizedBox(
-                height: 300,
+                height: 280,
               ),
-              MyButton(
-                  text: "Check $name in Foodpedia",
-                  onTap: () {
-                    navigateToFoodDetails(label);
-                  })
+              Container(
+                padding: const EdgeInsets.only(
+                    top: 30, left: 55, right: 55, bottom: 22),
+                child: Column(
+                  children: [
+                    MyButton(
+                        text: "Check in Foodpedia",
+                        onTap: () {
+                          navigateToFoodDetails(label);
+                        }),
+                  ],
+                ),
+              )
             ],
           ),
         ),

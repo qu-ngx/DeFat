@@ -146,6 +146,7 @@ class Planner extends ChangeNotifier {
         return i;
       }
     }
+    return null;
   }
 
   // Show the Food in AI camera
