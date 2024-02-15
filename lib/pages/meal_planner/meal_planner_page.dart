@@ -43,15 +43,26 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                 fontSize: 25),
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
+        shadowColor: Colors.grey,
       ),
       body: ListView(children: [
         Consumer<Planner>(
             builder: (context, value, child) => Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 280),
+                      child: Text(
+                        "Meals",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.orange,
+                            fontSize: 25),
+                      ),
+                    ),
                     const SizedBox(
-                      height: 40,
+                      height: 5,
                     ),
                     Center(
                         child: CircularPercentIndicator(

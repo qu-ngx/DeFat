@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: Colors.white,
       floatingActionButton: SizedBox(
         height: 70,
@@ -48,6 +49,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomAppBar(
         color: Colors.orange,
         shape: const CircularNotchedRectangle(),
+        notchMargin: 6,
+        surfaceTintColor: Colors.transparent,
         elevation: 5.0,
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           IconButton(

@@ -26,7 +26,7 @@ class FoodTile extends StatelessWidget {
                     top: BorderSide(width: 1.0, color: Colors.grey.shade500),
                     right: BorderSide(width: 1.0, color: Colors.grey.shade500),
                     left: BorderSide(width: 1.0, color: Colors.grey.shade500)),
-                color: Colors.white,
+                color: Colors.orange.shade100,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
@@ -55,7 +55,9 @@ class FoodTile extends StatelessWidget {
                     Text(
                       food.name,
                       style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 25),
+                          color: Colors.orange,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25),
                     ),
                   ],
                 ),

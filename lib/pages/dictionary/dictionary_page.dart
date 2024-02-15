@@ -39,18 +39,10 @@ class _DictPageState extends State<DictPage> {
         automaticallyImplyLeading: false,
         title: const Center(
           child: Column(
-            children: [
-              Text(
-                "Food Search",
-                style: TextStyle(
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25),
-              ),
-            ],
+            children: [],
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
       ),
       // appBar: AppBar(
@@ -65,11 +57,26 @@ class _DictPageState extends State<DictPage> {
       body: Column(
         children: [
           const SizedBox(height: 15),
+          const Text(
+            "Foodpedia",
+            style: TextStyle(
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+                fontSize: 25),
+          ),
+
+          const SizedBox(
+            height: 30,
+          ),
+
           // search bar
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
             child: TextField(
               decoration: InputDecoration(
+                labelText: "Search for your food",
+                labelStyle: const TextStyle(fontWeight: FontWeight.w200),
                 focusedBorder: OutlineInputBorder(
                   borderSide: const BorderSide(color: Colors.orange),
                   borderRadius: BorderRadius.circular(20),
