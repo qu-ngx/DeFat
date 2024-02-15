@@ -106,7 +106,7 @@ class _DictPageState extends State<DictPage> {
 
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 30, right: 30),
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: foodList.length,
