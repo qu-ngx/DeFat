@@ -32,13 +32,6 @@ class _QuizzPageState extends State<QuizzPage> {
           alignment: Alignment.center,
           child: Column(
             children: [
-              const Text(
-                "Ready to learn more about on your food?",
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 19,
-                    fontWeight: FontWeight.bold),
-              ),
               const SizedBox(
                 height: 40,
               ),

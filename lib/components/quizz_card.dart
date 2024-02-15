@@ -31,20 +31,24 @@ class _QuizCardState extends State<QuizCard> {
         elevation: 5.0,
         child: Container(
           width: 355,
+          height: 90,
           padding: const EdgeInsets.all(13),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: Colors.grey[100],
           ),
           child: Column(children: [
-            Text(
-              widget.title,
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                  color: widget.colors,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  backgroundColor: Colors.transparent),
+            Padding(
+              padding: const EdgeInsets.only(top: 12),
+              child: Text(
+                widget.title,
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                    color: widget.colors,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    backgroundColor: Colors.transparent),
+              ),
             )
           ]),
         ),
