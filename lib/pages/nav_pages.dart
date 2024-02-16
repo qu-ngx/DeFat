@@ -18,7 +18,8 @@ class _HomePageState extends State<HomePage> {
   // final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   PageController selectedPage = PageController(initialPage: 0);
-  int currentPage = 0;
+
+  final Color _iconColor = Colors.white;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,6 @@ class _HomePageState extends State<HomePage> {
             shape: const CircleBorder(),
             onPressed: () {
               selectedPage.jumpToPage(2);
-              currentPage = 2;
             },
             elevation: 1,
             backgroundColor: Colors.orange.shade200,
@@ -46,67 +46,72 @@ class _HomePageState extends State<HomePage> {
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.orange,
-        shape: const CircularNotchedRectangle(),
-        notchMargin: 6,
-        surfaceTintColor: Colors.transparent,
-        elevation: 5.0,
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          IconButton(
-            iconSize: 80,
-            selectedIcon: Image.asset(
-              'assets/icons/s_meals.png',
-              color: Colors.white,
-              height: 200,
-            ),
-            onPressed: () {
-              selectedPage.jumpToPage(0);
-              currentPage = 0;
-            },
-            icon: Image.asset(
-              'assets/icons/meals.png',
-              color: Colors.white,
-              height: 200,
-            ),
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(),
+        child: BottomAppBar(
+          color: Colors.orange,
+          shape: const CircularNotchedRectangle(),
+          notchMargin: 6,
+          surfaceTintColor: Colors.transparent,
+          elevation: 5.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                iconSize: 80,
+                selectedIcon: Image.asset(
+                  'assets/icons/s_meals.png',
+                  color: _iconColor,
+                  height: 200,
+                ),
+                onPressed: () {
+                  selectedPage.jumpToPage(0);
+                },
+                icon: Image.asset(
+                  'assets/icons/meals.png',
+                  color: _iconColor,
+                  height: 200,
+                ),
+              ),
+              IconButton(
+                iconSize: 15,
+                onPressed: () {
+                  selectedPage.jumpToPage(1);
+                },
+                icon: Image.asset(
+                  'assets/icons/book.png',
+                  color: _iconColor,
+                  height: 34,
+                ),
+              ),
+              const SizedBox(
+                width: 90,
+              ),
+              IconButton(
+                iconSize: 33,
+                onPressed: () {
+                  selectedPage.jumpToPage(3);
+                },
+                icon: Icon(
+                  Icons.quiz_outlined,
+                  size: 36,
+                  color: _iconColor,
+                ),
+              ),
+              IconButton(
+                iconSize: 33,
+                onPressed: () {
+                  selectedPage.jumpToPage(4);
+                },
+                icon: Icon(
+                  Icons.person,
+                  size: 33,
+                  color: _iconColor,
+                ),
+              ),
+            ],
           ),
-          IconButton(
-            iconSize: 15,
-            onPressed: () {
-              selectedPage.jumpToPage(1);
-            },
-            icon: Image.asset(
-              'assets/icons/book.png',
-              color: Colors.white,
-              height: 34,
-            ),
-          ),
-          const SizedBox(
-            width: 90,
-          ),
-          IconButton(
-            iconSize: 33,
-            onPressed: () {
-              selectedPage.jumpToPage(3);
-            },
-            icon: const Icon(
-              Icons.quiz_outlined,
-              size: 36,
-              color: Colors.white,
-            ),
-          ),
-          IconButton(
-            iconSize: 33,
-            onPressed: () {
-              selectedPage.jumpToPage(4);
-            },
-            icon: const Icon(
-              Icons.person,
-              size: 33,
-              color: Colors.white,
-            ),
-          ),
-        ]),
+        ),
       ),
 
       body: PageView(

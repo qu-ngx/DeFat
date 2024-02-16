@@ -62,7 +62,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 5,
+                      height: 15,
                     ),
                     Center(
                         child: CircularPercentIndicator(
@@ -81,7 +81,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       ),
                     )),
                     const SizedBox(
-                      height: 40,
+                      height: 27,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
