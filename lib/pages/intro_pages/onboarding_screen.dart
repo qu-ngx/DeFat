@@ -1,5 +1,6 @@
 import 'package:nufit/pages/authenticator/auth_page.dart';
 import 'package:flutter/material.dart';
+import 'package:nufit/pages/intro_pages/intro_page_1.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -30,9 +31,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             },
             children: [
               // Changes to match with the relative pages
-              Container(
-                color: Colors.blue,
-              ),
+              // const IntroScreen0(),
+
+              const IntroScreen1(),
+
               Container(
                 color: Colors.yellow,
               ),
