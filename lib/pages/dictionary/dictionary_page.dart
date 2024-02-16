@@ -35,16 +35,6 @@ class _DictPageState extends State<DictPage> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Center(
-          child: Column(
-            children: [],
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
       // appBar: AppBar(
       //   backgroundColor: Colors.transparent,
       //   elevation: 0,
@@ -56,50 +46,62 @@ class _DictPageState extends State<DictPage> {
       // ),
       body: Column(
         children: [
-          const SizedBox(height: 15),
-          const Text(
-            "Foodpedia",
-            style: TextStyle(
-                color: Colors.orange,
-                fontWeight: FontWeight.bold,
-                fontSize: 25),
-          ),
-
-          const SizedBox(
-            height: 30,
-          ),
-
-          const Padding(
-            padding: EdgeInsets.only(right: 230),
-            child: Text(
-              "Search for food: ",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-
-          // search bar
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Enter food name",
-                labelStyle: const TextStyle(fontWeight: FontWeight.w200),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: Colors.orange),
-                  borderRadius: BorderRadius.circular(20),
+          Container(
+            color: Colors.orange,
+            child: Column(
+              children: [
+                const SizedBox(height: 50),
+                const Text(
+                  "Foodpedia",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: Colors.orange),
-                  borderRadius: BorderRadius.circular(20),
+
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
+
+                const Padding(
+                  padding: EdgeInsets.only(right: 230),
+                  child: Text(
+                    "Search for food: ",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+
+                // search bar
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 25.0, vertical: 10.0),
+                  child: TextField(
+                    autofocus: false,
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(
+                        Icons.find_in_page,
+                      ),
+                      filled: true,
+                      hintText: "Name of food",
+                      hintStyle: const TextStyle(fontWeight: FontWeight.w200),
+                      fillColor: Colors.white,
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 15),
+              ],
             ),
-          ),
-
-          const SizedBox(height: 15),
-
-          // Common food list
+          ), // Common food list
           // Padding(
           //   padding: const EdgeInsets.only(top: 25.0, bottom: 25),
           //   child: Text(

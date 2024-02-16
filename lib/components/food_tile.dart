@@ -23,14 +23,16 @@ class FoodTile extends StatelessWidget {
               height: 85,
               decoration: BoxDecoration(
                 border: Border(
-                    top: BorderSide(width: 1.0, color: Colors.grey.shade500),
-                    right: BorderSide(width: 1.0, color: Colors.grey.shade500),
-                    left: BorderSide(width: 1.0, color: Colors.grey.shade500)),
-                color: Colors.orange.shade200,
+                  top: BorderSide(width: 1.0, color: Colors.orange.shade500),
+                  right: BorderSide(width: 1.0, color: Colors.orange.shade500),
+                  left: BorderSide(width: 1.0, color: Colors.orange.shade500),
+                  bottom: BorderSide(width: 1.0, color: Colors.orange.shade500),
+                ),
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.6),
+                    color: Colors.orange.withOpacity(0.3),
                     spreadRadius: 2,
                     blurRadius: 3,
                     offset: const Offset(0, 6), // changes position of shadow
@@ -47,8 +49,8 @@ class FoodTile extends StatelessWidget {
                     ),
                     Text(
                       food.name,
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: Colors.orange.shade800,
                           fontWeight: FontWeight.bold,
                           fontSize: 25),
                     ),

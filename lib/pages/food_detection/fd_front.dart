@@ -47,7 +47,7 @@ class _FoodMLState extends State<FoodML> {
       int fibers, int carbs, int proteins) {
     return Expanded(
       child: Container(
-        height: 515,
+        height: 623,
         color: Colors.transparent,
         child: Expanded(
           child: ExpansionTile(
@@ -96,14 +96,13 @@ class _FoodMLState extends State<FoodML> {
     final planner = context.read<Planner>();
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orange,
         automaticallyImplyLeading: false,
         title: const Center(
           child: Text(
             "AI Food Camera",
             style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.orange,
-                fontSize: 25),
+                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),
           ),
         ),
       ),
