@@ -36,19 +36,19 @@ class _QuizzPageState extends State<QuizzPage> {
                 height: 40,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16),
+                padding: const EdgeInsets.only(left: 35, right: 35),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      width: 340,
+                      width: 500,
                       height: 230,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                             image: AssetImage("assets/images/dict_1.jpeg"),
-                            fit: BoxFit.cover),
+                            fit: BoxFit.fill),
                       ),
                     ),
                     const SizedBox(
@@ -104,7 +104,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                             image: AssetImage("assets/images/dict_2.jpeg"),
-                            fit: BoxFit.cover),
+                            fit: BoxFit.fitHeight),
                       ),
                     ),
                     const ExpansionTile(
@@ -133,7 +133,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                             image: AssetImage("assets/images/dict_3.jpeg"),
-                            fit: BoxFit.cover),
+                            fit: BoxFit.fill),
                       ),
                     ),
                     const ExpansionTile(
@@ -141,7 +141,7 @@ class _QuizzPageState extends State<QuizzPage> {
                         "Hard - Meals For Personal Goals",
                         style: TextStyle(
                             color: Colors.red,
-                            fontSize: 23,
+                            fontSize: 22,
                             fontWeight: FontWeight.bold),
                       ),
                       children: [

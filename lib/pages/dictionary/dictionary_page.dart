@@ -35,26 +35,23 @@ class _DictPageState extends State<DictPage> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   elevation: 0,
-      //   title: Text(
-      //     "Food Search",
-      //     style:
-      //         TextStyle(color: Colors.grey[900], fontWeight: FontWeight.bold),
-      //   ),
-      // ),
       body: Column(
         children: [
           Container(
-            color: Colors.orange,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border(
+                bottom: BorderSide(width: 1.0, color: Colors.grey.shade300),
+              ),
+              color: Colors.white,
+            ),
             child: Column(
               children: [
                 const SizedBox(height: 50),
                 const Text(
                   "Foodpedia",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.orange,
                       fontWeight: FontWeight.bold,
                       fontSize: 25),
                 ),
@@ -62,20 +59,10 @@ class _DictPageState extends State<DictPage> {
                 const SizedBox(
                   height: 10,
                 ),
-
-                const Padding(
-                  padding: EdgeInsets.only(right: 230),
-                  child: Text(
-                    "Search for food: ",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                ),
-
                 // search bar
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 25.0, vertical: 10.0),
+                      horizontal: 15.0, vertical: 10.0),
                   child: TextField(
                     autofocus: false,
                     decoration: InputDecoration(
@@ -83,15 +70,15 @@ class _DictPageState extends State<DictPage> {
                         Icons.find_in_page,
                       ),
                       filled: true,
-                      hintText: "Name of food",
+                      hintText: "Search for food",
                       hintStyle: const TextStyle(fontWeight: FontWeight.w200),
                       fillColor: Colors.white,
                       focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white),
+                        borderSide: const BorderSide(color: Colors.orange),
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
@@ -101,7 +88,8 @@ class _DictPageState extends State<DictPage> {
                 const SizedBox(height: 15),
               ],
             ),
-          ), // Common food list
+          ),
+          // Common food list
           // Padding(
           //   padding: const EdgeInsets.only(top: 25.0, bottom: 25),
           //   child: Text(
