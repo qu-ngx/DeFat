@@ -32,7 +32,7 @@ class FoodTile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.orange.withOpacity(0.3),
+                    color: Colors.orange.withOpacity(0.15),
                     spreadRadius: 2,
                     blurRadius: 3,
                     offset: const Offset(0, 6), // changes position of shadow
