@@ -12,39 +12,64 @@ class _QuizzPageState extends State<QuizzPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Center(
-          child: Text(
-            "Quizz",
-            style: TextStyle(
-                color: Colors.orange,
-                fontWeight: FontWeight.bold,
-                fontSize: 25),
-          ),
-        ),
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 40,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 800,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border(
+                bottom: BorderSide(width: 1.0, color: Colors.grey.shade300),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 35, right: 35),
+              color: Colors.white,
+            ),
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 35,
+                ),
+                Text(
+                  "Quizz",
+                  style: TextStyle(
+                      color: Colors.orange,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
+                ),
+                SizedBox(
+                  height: 30,
+                )
+              ],
+            ),
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 28, right: 28),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    const SizedBox(
+                      height: 30,
+                    ),
                     Container(
                       width: 500,
                       height: 230,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
+                        border: Border(
+                          bottom: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          top: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          left: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          right: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                        ),
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                             image: AssetImage("assets/images/dict_1.jpeg"),
@@ -156,10 +181,10 @@ class _QuizzPageState extends State<QuizzPage> {
                     ),
                   ],
                 ),
-              )
-            ],
-          ),
-        ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

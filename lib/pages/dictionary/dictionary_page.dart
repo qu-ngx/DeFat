@@ -47,7 +47,7 @@ class _DictPageState extends State<DictPage> {
             ),
             child: Column(
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
                 const Text(
                   "Foodpedia",
                   style: TextStyle(
