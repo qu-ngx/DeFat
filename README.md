@@ -11,16 +11,13 @@
 
 ## Project structure module
 
-Project compose 2 git submodules:
+Project compose 2 repositories:
 
-1. Mobile Application: [current repository](./)
-2. Backend AI Model: [./Food Detection API](https://github.com/qu-ngx/nufit-ml.git)
+1. Full-stack Mobile Application: [current repository](./)
+2. Backend AI Model: [Food Detection API](https://github.com/qu-ngx/nufit-ml.git)
 
 <hr />
 
-## How to run the project
-
-**  Coming soon  ** 
 
 ## Mobile Installation
 
@@ -37,6 +34,8 @@ Project compose 2 git submodules:
 - Android Studio: [https://developer.android.com/studio](https://developer.android.com/studio)
 - Xcode: [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)
 - Run on your physical device with the instruction [here](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-device) (for iOS) and [here](https://flutter.dev/docs/get-started/install/windows#set-up-the-android-device) (for Android).
+
+## How to run the project on local machine
 
 **Steps**:
 
