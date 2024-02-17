@@ -50,35 +50,38 @@ class _FoodMLState extends State<FoodML> {
         height: 623,
         color: Colors.transparent,
         child: Expanded(
-          child: ExpansionTile(
-            title: Text(
-              'Food detected: $name',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-            children: <Widget>[
-              ListTile(
-                  iconColor: Colors.grey,
-                  title: Text(
-                    "Cal: $calories Fat: $fat Fib: $fibers Carb: $carbs Prot: $proteins",
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                  )),
-              const SizedBox(
-                height: 280,
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+              title: Text(
+                'Food detected: $name',
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
-              Container(
-                padding: const EdgeInsets.only(
-                    top: 30, left: 55, right: 55, bottom: 22),
-                child: Column(
-                  children: [
-                    MyButton(
-                        text: "Check in Foodpedia",
-                        onTap: () {
-                          navigateToFoodDetails(label);
-                        }),
-                  ],
+              children: <Widget>[
+                ListTile(
+                    iconColor: Colors.grey,
+                    title: Text(
+                      "Cal: $calories Fat: $fat Fib: $fibers Carb: $carbs Prot: $proteins",
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    )),
+                const SizedBox(
+                  height: 280,
                 ),
-              )
-            ],
+                Container(
+                  padding: const EdgeInsets.only(
+                      top: 30, left: 55, right: 55, bottom: 22),
+                  child: Column(
+                    children: [
+                      MyButton(
+                          text: "Check in Foodpedia",
+                          onTap: () {
+                            navigateToFoodDetails(label);
+                          }),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

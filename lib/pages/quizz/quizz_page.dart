@@ -79,44 +79,48 @@ class _QuizzPageState extends State<QuizzPage> {
                     const SizedBox(
                       height: 5,
                     ),
-                    const ExpansionTile(
-                      title: Text(
-                        "Easy - Basic Nutritions",
-                        style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold),
+                    Theme(
+                      data: Theme.of(context)
+                          .copyWith(dividerColor: Colors.transparent),
+                      child: const ExpansionTile(
+                        title: Text(
+                          "Easy - Basic Nutritions",
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        children: [
+                          QuizCard(
+                            category: "Fat",
+                            title: "Lesson 1: Fat",
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          QuizCard(
+                            category: "Carbs",
+                            title: "Lesson 2: Carbs",
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          QuizCard(
+                            category: "Fibers",
+                            title: "Lesson 3: Fibers",
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          QuizCard(
+                            category: "Proteins",
+                            title: "Lesson 4: Proteins",
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
                       ),
-                      children: [
-                        QuizCard(
-                          category: "Fat",
-                          title: "Lesson 1: Fat",
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        QuizCard(
-                          category: "Carbs",
-                          title: "Lesson 2: Carbs",
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        QuizCard(
-                          category: "Fibers",
-                          title: "Lesson 3: Fibers",
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        QuizCard(
-                          category: "Proteins",
-                          title: "Lesson 4: Proteins",
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
                     ),
                     const SizedBox(
                       height: 30,
@@ -132,20 +136,24 @@ class _QuizzPageState extends State<QuizzPage> {
                             fit: BoxFit.fitHeight),
                       ),
                     ),
-                    const ExpansionTile(
-                      title: Text(
-                        "Medium - Balance Meals",
-                        style: TextStyle(
-                            color: Colors.orange,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      children: [
-                        Text(
-                          "Coming Soon!",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                    Theme(
+                      data: Theme.of(context)
+                          .copyWith(dividerColor: Colors.transparent),
+                      child: const ExpansionTile(
+                        title: Text(
+                          "Medium - Balance Meals",
+                          style: TextStyle(
+                              color: Colors.orange,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
                         ),
-                      ],
+                        children: [
+                          Text(
+                            "Coming Soon!",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 30,
@@ -161,20 +169,24 @@ class _QuizzPageState extends State<QuizzPage> {
                             fit: BoxFit.fill),
                       ),
                     ),
-                    const ExpansionTile(
-                      title: Text(
-                        "Hard - Meals For Personal Goals",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      children: [
-                        Text(
-                          "Coming Soon!",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                    Theme(
+                      data: Theme.of(context)
+                          .copyWith(dividerColor: Colors.transparent),
+                      child: const ExpansionTile(
+                        title: Text(
+                          "Hard - Meals For Personal Goals",
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
                         ),
-                      ],
+                        children: [
+                          Text(
+                            "Coming Soon!",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 150,
