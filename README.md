@@ -69,7 +69,7 @@ flutter run
 flutter run --release
 ```
 
-**Note**: If you meet the problem from installation, you should:
+**Note**: If you encounter some problems with installation, you should:
 
 - Check your internet connection (For Authentication & packages installation);
 - Run `flutter clean` and `flutter run`;
