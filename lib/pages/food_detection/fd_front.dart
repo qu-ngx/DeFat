@@ -47,7 +47,7 @@ class _FoodMLState extends State<FoodML> {
       int fibers, int carbs, int proteins) {
     return Expanded(
       child: Container(
-        height: 623,
+        height: 515,
         color: Colors.transparent,
         child: Expanded(
           child: Theme(
