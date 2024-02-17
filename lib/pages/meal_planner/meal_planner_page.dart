@@ -32,29 +32,18 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Center(
-          child: Text(
-            "Meals",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.orange,
-                fontSize: 25),
-          ),
-        ),
-        backgroundColor: Colors.white,
-        shadowColor: Colors.grey,
-      ),
       body: ListView(children: [
         Consumer<Planner>(
             builder: (context, value, child) => Column(
                   children: [
+                    const SizedBox(
+                      height: 40,
+                    ),
                     const Padding(
-                      padding: EdgeInsets.only(right: 280),
+                      padding: EdgeInsets.only(right: 250),
                       child: Text(
-                        "Meals",
-                        textAlign: TextAlign.start,
+                        "Overview",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.orange,
@@ -62,12 +51,25 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       ),
                     ),
                     const SizedBox(
+                      height: 13,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 75),
+                      child: Text(
+                        "See what you added to your meal here.",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 15.5,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
                       height: 15,
                     ),
                     Center(
                         child: CircularPercentIndicator(
-                      radius: 130,
-                      lineWidth: 25,
+                      radius: 120,
+                      lineWidth: 26,
                       percent: value.totalCaloriesCount() / 2500,
                       progressColor: Colors.orange,
                       backgroundColor: Colors.orange.shade100,
@@ -76,12 +78,12 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                         "Calories:\n${value.totalCaloriesCount()} / 2500",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 17,
+                            fontSize: 19,
                             color: Colors.yellow.shade900),
                       ),
                     )),
                     const SizedBox(
-                      height: 27,
+                      height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -147,65 +149,73 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       color: Colors.transparent,
                       child: ExpansionTile(
                         title: Text(
-                          'View all nutritions in your meals',
+                          'View full details of nutritions',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.grey.shade700),
                         ),
                         children: [
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                const SizedBox(width: 20),
+                                CircularPercentIndicator(
+                                  radius: 70,
+                                  lineWidth: 17,
+                                  progressColor: Colors.red,
+                                  backgroundColor: Colors.red.shade100,
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  center: Text(
+                                    "   Fat \n ${value.totalFatCount()} / 50",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(width: 20),
+                                CircularPercentIndicator(
+                                  radius: 70,
+                                  lineWidth: 17,
+                                  progressColor: Colors.brown,
+                                  backgroundColor: Colors.brown.shade100,
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  center: Text(
+                                    " Carbs \n ${value.totalCarbsCount()} / 50",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(width: 20),
+                                CircularPercentIndicator(
+                                  radius: 70,
+                                  lineWidth: 17,
+                                  progressColor: Colors.green,
+                                  backgroundColor: Colors.green.shade100,
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  center: Text(
+                                    "Fibers \n ${value.totalFibersCount()} / 50",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(width: 20),
+                                CircularPercentIndicator(
+                                  radius: 70,
+                                  lineWidth: 17,
+                                  progressColor: Colors.blue,
+                                  backgroundColor: Colors.blue.shade100,
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  center: Text(
+                                    "Proteins\n  ${value.totalFatCount()} / 50",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                const SizedBox(width: 20),
+                              ],
+                            ),
+                          ),
                           const SizedBox(height: 30),
-                          CircularPercentIndicator(
-                            radius: 90,
-                            lineWidth: 17,
-                            progressColor: Colors.red,
-                            backgroundColor: Colors.red.shade100,
-                            circularStrokeCap: CircularStrokeCap.round,
-                            center: Text(
-                              "   Fat \n ${value.totalFatCount()} / 50",
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          const SizedBox(height: 70),
-                          CircularPercentIndicator(
-                            radius: 90,
-                            lineWidth: 17,
-                            progressColor: Colors.brown,
-                            backgroundColor: Colors.brown.shade100,
-                            circularStrokeCap: CircularStrokeCap.round,
-                            center: Text(
-                              " Carbs \n ${value.totalCarbsCount()} / 50",
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          const SizedBox(height: 70),
-                          CircularPercentIndicator(
-                            radius: 90,
-                            lineWidth: 17,
-                            progressColor: Colors.green,
-                            backgroundColor: Colors.green.shade100,
-                            circularStrokeCap: CircularStrokeCap.round,
-                            center: Text(
-                              "Fibers \n ${value.totalFibersCount()} / 50",
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          const SizedBox(height: 70),
-                          CircularPercentIndicator(
-                            radius: 90,
-                            lineWidth: 17,
-                            progressColor: Colors.blue,
-                            backgroundColor: Colors.blue.shade100,
-                            circularStrokeCap: CircularStrokeCap.round,
-                            center: Text(
-                              "Proteins\n  ${value.totalFatCount()} / 50",
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          const SizedBox(height: 70),
                         ],
                       ),
                     ),
