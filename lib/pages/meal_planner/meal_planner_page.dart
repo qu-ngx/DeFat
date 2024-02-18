@@ -147,76 +147,80 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                     ),
                     Container(
                       color: Colors.transparent,
-                      child: ExpansionTile(
-                        title: Text(
-                          'View full details of nutritions',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey.shade700),
-                        ),
-                        children: [
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: [
-                                const SizedBox(width: 20),
-                                CircularPercentIndicator(
-                                  radius: 70,
-                                  lineWidth: 17,
-                                  progressColor: Colors.red,
-                                  backgroundColor: Colors.red.shade100,
-                                  circularStrokeCap: CircularStrokeCap.round,
-                                  center: Text(
-                                    "   Fat \n ${value.totalFatCount()} / 50",
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                                const SizedBox(width: 20),
-                                CircularPercentIndicator(
-                                  radius: 70,
-                                  lineWidth: 17,
-                                  progressColor: Colors.brown,
-                                  backgroundColor: Colors.brown.shade100,
-                                  circularStrokeCap: CircularStrokeCap.round,
-                                  center: Text(
-                                    " Carbs \n ${value.totalCarbsCount()} / 50",
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                                const SizedBox(width: 20),
-                                CircularPercentIndicator(
-                                  radius: 70,
-                                  lineWidth: 17,
-                                  progressColor: Colors.green,
-                                  backgroundColor: Colors.green.shade100,
-                                  circularStrokeCap: CircularStrokeCap.round,
-                                  center: Text(
-                                    "Fibers \n ${value.totalFibersCount()} / 50",
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                                const SizedBox(width: 20),
-                                CircularPercentIndicator(
-                                  radius: 70,
-                                  lineWidth: 17,
-                                  progressColor: Colors.blue,
-                                  backgroundColor: Colors.blue.shade100,
-                                  circularStrokeCap: CircularStrokeCap.round,
-                                  center: Text(
-                                    "Proteins\n  ${value.totalFatCount()} / 50",
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                                const SizedBox(width: 20),
-                              ],
-                            ),
+                      child: Theme(
+                        data: Theme.of(context)
+                            .copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile(
+                          title: Text(
+                            'View full details of nutritions',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey.shade700),
                           ),
-                          const SizedBox(height: 30),
-                        ],
+                          children: [
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  const SizedBox(width: 20),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 17,
+                                    progressColor: Colors.red,
+                                    backgroundColor: Colors.red.shade100,
+                                    circularStrokeCap: CircularStrokeCap.round,
+                                    center: Text(
+                                      "   Fat \n ${value.totalFatCount()} / 50",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 17,
+                                    progressColor: Colors.brown,
+                                    backgroundColor: Colors.brown.shade100,
+                                    circularStrokeCap: CircularStrokeCap.round,
+                                    center: Text(
+                                      " Carbs \n ${value.totalCarbsCount()} / 50",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 17,
+                                    progressColor: Colors.green,
+                                    backgroundColor: Colors.green.shade100,
+                                    circularStrokeCap: CircularStrokeCap.round,
+                                    center: Text(
+                                      "Fibers \n ${value.totalFibersCount()} / 50",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  CircularPercentIndicator(
+                                    radius: 70,
+                                    lineWidth: 17,
+                                    progressColor: Colors.blue,
+                                    backgroundColor: Colors.blue.shade100,
+                                    circularStrokeCap: CircularStrokeCap.round,
+                                    center: Text(
+                                      "Proteins\n  ${value.totalFatCount()} / 50",
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 20),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(height: 30),
+                          ],
+                        ),
                       ),
                     ),
                     // Button

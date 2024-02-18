@@ -10,7 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  WidgetsFlutterBinding.ensureInitialized();
   // Wrap the whole app with change notifier provider
   runApp(ChangeNotifierProvider(
     create: (context) => Planner(),

@@ -1,18 +1,18 @@
 import 'package:nufit/pages/dictionary/dictionary_page.dart';
 import 'package:nufit/pages/food_detection/fd_front.dart';
+import 'package:nufit/pages/home/home.dart';
 import 'package:nufit/pages/meal_planner/meal_planner_page.dart';
-import 'package:nufit/pages/profile/profile_page.dart';
 import 'package:nufit/pages/quizz/quizz_page.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class NavPage extends StatefulWidget {
+  const NavPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<NavPage> createState() => _NavPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _NavPageState extends State<NavPage> {
   //// Second Nav Bar
   // int _page = 0;
   // final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -58,6 +58,17 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
+                  iconSize: 5,
+                  onPressed: () {
+                    selectedPage.jumpToPage(0);
+                  },
+                  icon: Image.asset(
+                    'assets/icons/homepage.png',
+                    color: _iconColor,
+                    height: 40,
+                    width: 35,
+                  )),
+              IconButton(
                 iconSize: 80,
                 selectedIcon: Image.asset(
                   'assets/icons/s_meals.png',
@@ -65,37 +76,27 @@ class _HomePageState extends State<HomePage> {
                   height: 200,
                 ),
                 onPressed: () {
-                  selectedPage.jumpToPage(0);
+                  selectedPage.jumpToPage(1);
                 },
                 icon: Image.asset(
                   'assets/icons/meals.png',
                   color: _iconColor,
+                  width: 40,
                   height: 200,
                 ),
+              ),
+              const SizedBox(
+                width: 95,
               ),
               IconButton(
                 iconSize: 15,
                 onPressed: () {
-                  selectedPage.jumpToPage(1);
+                  selectedPage.jumpToPage(3);
                 },
                 icon: Image.asset(
                   'assets/icons/book.png',
                   color: _iconColor,
                   height: 34,
-                ),
-              ),
-              const SizedBox(
-                width: 90,
-              ),
-              IconButton(
-                iconSize: 33,
-                onPressed: () {
-                  selectedPage.jumpToPage(3);
-                },
-                icon: Icon(
-                  Icons.quiz_outlined,
-                  size: 36,
-                  color: _iconColor,
                 ),
               ),
               IconButton(
@@ -104,8 +105,8 @@ class _HomePageState extends State<HomePage> {
                   selectedPage.jumpToPage(4);
                 },
                 icon: Icon(
-                  Icons.person,
-                  size: 33,
+                  Icons.quiz_outlined,
+                  size: 36,
                   color: _iconColor,
                 ),
               ),
@@ -118,19 +119,19 @@ class _HomePageState extends State<HomePage> {
         controller: selectedPage,
         children: const <Widget>[
           Center(
-            child: MealPlannerPage(),
+            child: HomePage(),
           ),
           Center(
-            child: DictPage(),
+            child: MealPlannerPage(),
           ),
           Center(
             child: FoodML(),
           ),
           Center(
-            child: QuizzPage(),
+            child: DictPage(),
           ),
           Center(
-            child: ProfilePage(),
+            child: QuizzPage(),
           ),
         ],
       ),
