@@ -76,18 +76,35 @@ class _LoginPageState extends State<LoginPage> {
                 size: 100,
               ),
               const SizedBox(height: 50),
-              const Text(
-                "Welcome to NuFit.",
-                style: TextStyle(
-                    color: Colors.orange,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "         Welcome to ",
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w100),
+                  ),
+                  Text(
+                    "Nu",
+                    style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.orange),
+                  ),
+                  Text(
+                    "Fit",
+                    style: TextStyle(fontSize: 28, color: Colors.grey),
+                  ),
+                  // Profile Icon
+                  SizedBox(
+                    width: 80,
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 5,
               ),
               Text(
-                "Ready for a fitter body and healthier meals?",
+                "Are you ready for a fitter body and healthier meals?",
                 style: TextStyle(
                     color: Colors.orange.shade300,
                     fontSize: 14,

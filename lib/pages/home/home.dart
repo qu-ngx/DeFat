@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nufit/components/tip_card.dart';
+import 'package:nufit/pages/profile/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,7 +49,10 @@ class _HomePageState extends State<HomePage> {
                           width: 80,
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const ProfilePage()));
+                          },
                           child: Container(
                             height: 38,
                             width: 38,
@@ -88,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     SizedBox(
                       height: 250,

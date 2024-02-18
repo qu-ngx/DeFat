@@ -3,6 +3,8 @@ import 'package:nufit/components/loginout_button.dart';
 import 'package:nufit/components/profile_textbox.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nufit/main.dart';
+import 'package:nufit/pages/authenticator/login_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -14,6 +16,8 @@ class _ProfilePageState extends State<ProfilePage> {
   void signUserOut() {
     FirebaseAuth.instance.signOut();
     GoogleSignIn().disconnect();
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const MyApp()));
   }
 
   // Get the current user
@@ -29,14 +33,20 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        iconTheme: const IconThemeData(
+          color: Colors.orange, //change your color here
+        ),
+        automaticallyImplyLeading: true,
         title: const Center(
-          child: Text(
-            "Profile",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 25,
-                color: Colors.orange),
+          child: Padding(
+            padding: EdgeInsets.only(right: 60),
+            child: Text(
+              "Profile",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.orange),
+            ),
           ),
         ),
         backgroundColor: Colors.transparent,
