@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 class TipCard extends StatelessWidget {
   final String imgPath;
   final String firstFirst;
+  // ignore: prefer_typing_uninitialized_variables
   final firstFirstColor;
+  // ignore: prefer_typing_uninitialized_variables
   final secondFirstColor;
   final String secondFirst;
+  // ignore: prefer_typing_uninitialized_variables
   final bottomColor;
   final String bottomLine;
 
@@ -23,8 +26,8 @@ class TipCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 360,
-      padding: const EdgeInsets.all(20),
+      width: 340,
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -44,7 +47,7 @@ class TipCard extends StatelessWidget {
                 style: TextStyle(
                     color: firstFirstColor,
                     fontWeight: FontWeight.bold,
-                    fontSize: 28),
+                    fontSize: 25),
               ),
               Text(
                 secondFirst,
@@ -53,24 +56,21 @@ class TipCard extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 10,
           ),
           Image.asset(
             imgPath,
-            width: 85,
-            height: 85,
+            width: 75,
+            height: 75,
           ),
           const SizedBox(
-            height: 15,
+            height: 30,
           ),
           Text(
             bottomLine,
             style: TextStyle(
-                color: bottomColor, fontWeight: FontWeight.bold, fontSize: 20),
+                color: bottomColor, fontWeight: FontWeight.bold, fontSize: 18),
           ),
-          const SizedBox(
-            height: 5,
-          )
         ],
       ),
     );
