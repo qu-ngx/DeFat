@@ -2,11 +2,11 @@ class Food {
   String label;
   String name;
   String imagePath;
-  int calories;
-  int fat;
-  int proteins;
-  int carbs;
-  int fibers;
+  double calories;
+  double fat;
+  double proteins;
+  double carbs;
+  double fibers;
 
   Food(
       {required this.label,

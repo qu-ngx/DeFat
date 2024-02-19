@@ -27,7 +27,7 @@ class Planner extends ChangeNotifier {
         imagePath: "assets/images/grilled-chicken.png",
         calories: 1,
         fat: 0,
-        proteins: 0,
+        proteins: 22.5,
         carbs: 0,
         fibers: 0),
     Food(
@@ -100,40 +100,40 @@ class Planner extends ChangeNotifier {
     notifyListeners();
   }
 
-  int totalCaloriesCount() {
-    int totalCalories = 0;
+  double totalCaloriesCount() {
+    double totalCalories = 0;
     for (int i = 0; i < _planner.length; i++) {
       totalCalories += _planner[i].calories;
     }
     return totalCalories;
   }
 
-  int totalFatCount() {
-    int totalFat = 0;
+  double totalFatCount() {
+    double totalFat = 0;
     for (int i = 0; i < _planner.length; i++) {
       totalFat += _planner[i].fat;
     }
     return totalFat;
   }
 
-  int totalProteinsCount() {
-    int totalProteins = 0;
+  double totalProteinsCount() {
+    double totalProteins = 0;
     for (int i = 0; i < _planner.length; i++) {
       totalProteins += _planner[i].proteins;
     }
     return totalProteins;
   }
 
-  int totalCarbsCount() {
-    int totalCarbs = 0;
+  double totalCarbsCount() {
+    double totalCarbs = 0;
     for (int i = 0; i < _planner.length; i++) {
       totalCarbs += _planner[i].carbs;
     }
     return totalCarbs;
   }
 
-  int totalFibersCount() {
-    int totalFibers = 0;
+  double totalFibersCount() {
+    double totalFibers = 0;
     for (int i = 0; i < _planner.length; i++) {
       totalFibers += _planner[i].fibers;
     }

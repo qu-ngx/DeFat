@@ -44,8 +44,8 @@ class _FoodMLState extends State<FoodML> {
     );
   }
 
-  Widget foodInfoDropDown(String label, String name, int calories, int fat,
-      int fibers, int carbs, int proteins) {
+  Widget foodInfoDropDown(String label, String name, double calories,
+      double fat, double fibers, double carbs, double proteins) {
     return Expanded(
       child: Container(
         height: 515,
@@ -151,15 +151,15 @@ class _FoodMLState extends State<FoodML> {
 
                                   String name = foodItem.name;
 
-                                  int calories = foodItem.calories;
+                                  double calories = foodItem.calories;
 
-                                  int carbs = foodItem.carbs;
+                                  double carbs = foodItem.carbs;
 
-                                  int fibers = foodItem.fibers;
+                                  double fibers = foodItem.fibers;
 
-                                  int fat = foodItem.fat;
+                                  double fat = foodItem.fat;
 
-                                  int proteins = foodItem.proteins;
+                                  double proteins = foodItem.proteins;
 
                                   // Removed the first widget list from the widgetlist if widgetlist is non-empty
                                   if (widgetList.isNotEmpty) {
@@ -201,15 +201,15 @@ class _FoodMLState extends State<FoodML> {
 
                                 String name = foodItem.name;
 
-                                int calories = foodItem.calories;
+                                double calories = foodItem.calories;
 
-                                int carbs = foodItem.carbs;
+                                double carbs = foodItem.carbs;
 
-                                int fibers = foodItem.fibers;
+                                double fibers = foodItem.fibers;
 
-                                int fat = foodItem.fat;
+                                double fat = foodItem.fat;
 
-                                int proteins = foodItem.proteins;
+                                double proteins = foodItem.proteins;
                                 if (widgetList.isNotEmpty) {
                                   widgetList.removeAt(0);
                                 }
