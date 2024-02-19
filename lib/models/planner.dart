@@ -19,7 +19,7 @@ class Planner extends ChangeNotifier {
         calories: 341,
         fat: 20,
         proteins: 14,
-        carbs: 2.63,
+        carbs: 2.6,
         fibers: 0),
     Food(
         label: "grilled_chicken",
@@ -46,7 +46,7 @@ class Planner extends ChangeNotifier {
         calories: 91,
         fat: 6.7,
         proteins: 6.1,
-        carbs: 0.98,
+        carbs: 1,
         fibers: 0.7),
     Food(
         label: "pasta",
@@ -55,7 +55,7 @@ class Planner extends ChangeNotifier {
         calories: 196,
         fat: 1.2,
         proteins: 7.2,
-        carbs: 13.36,
+        carbs: 13.4,
         fibers: 1.8),
     Food(
         label: "lettuce",
@@ -64,7 +64,7 @@ class Planner extends ChangeNotifier {
         calories: 16,
         fat: 0.3,
         proteins: 1.2,
-        carbs: 6.24,
+        carbs: 6.2,
         fibers: 3.6),
     Food(
         label: "cantaloupe",
@@ -73,7 +73,7 @@ class Planner extends ChangeNotifier {
         calories: 94,
         fat: 0.5,
         proteins: 4.6,
-        carbs: 8.69,
+        carbs: 8.7,
         fibers: 0.8),
   ];
 
