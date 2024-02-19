@@ -4,7 +4,6 @@ import 'package:nufit/components/profile_textbox.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nufit/main.dart';
-import 'package:nufit/pages/authenticator/login_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

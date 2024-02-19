@@ -6,7 +6,9 @@ import 'package:nufit/pages/quizz/quizz_page.dart';
 import 'package:flutter/material.dart';
 
 class NavPage extends StatefulWidget {
-  const NavPage({super.key});
+  const NavPage({
+    super.key,
+  });
 
   @override
   State<NavPage> createState() => _NavPageState();
@@ -125,7 +127,9 @@ class _NavPageState extends State<NavPage> {
             child: MealPlannerPage(),
           ),
           Center(
-            child: FoodML(),
+            child: FoodML(
+              boolLeading: false,
+            ),
           ),
           Center(
             child: DictPage(),

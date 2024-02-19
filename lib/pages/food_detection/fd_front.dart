@@ -10,7 +10,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 class FoodML extends StatefulWidget {
-  const FoodML({super.key});
+  final bool boolLeading;
+  const FoodML({super.key, required this.boolLeading});
 
   @override
   State<FoodML> createState() => _FoodMLState();
@@ -100,7 +101,7 @@ class _FoodMLState extends State<FoodML> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: widget.boolLeading,
         title: const Center(
           child: Text(
             "AI Food Camera",
