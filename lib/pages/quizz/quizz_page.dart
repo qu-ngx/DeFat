@@ -129,6 +129,16 @@ class _QuizzPageState extends State<QuizzPage> {
                       width: 350,
                       height: 230,
                       decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          top: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          left: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          right: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                        ),
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
@@ -162,6 +172,16 @@ class _QuizzPageState extends State<QuizzPage> {
                       width: 340,
                       height: 230,
                       decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          top: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          left: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                          right: BorderSide(
+                              width: 1.0, color: Colors.orange.shade500),
+                        ),
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
