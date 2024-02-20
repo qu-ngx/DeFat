@@ -142,6 +142,16 @@ class _HomePageState extends State<HomePage> {
                             bottomColor: Colors.green[500],
                           ),
                           TipCard(
+                            imgPath: "assets/images/wheat-sack.png",
+                            firstFirst: "More",
+                            firstFirstColor: Colors.green.shade300,
+                            secondFirst: " cereal grains food",
+                            secondFirstColor: Colors.brown.shade700,
+                            bottomLine:
+                                "For more carbohydrates\nfor sugars and fat mediation",
+                            bottomColor: Colors.green[500],
+                          ),
+                          TipCard(
                             imgPath: "assets/images/meat.png",
                             firstFirst: "Reduce",
                             firstFirstColor: Colors.red.shade300,
