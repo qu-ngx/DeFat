@@ -56,14 +56,16 @@ class _FoodMLState extends State<FoodML> {
             child: ExpansionTile(
               title: Text(
                 'Food detected: $name',
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.red),
               ),
               children: <Widget>[
                 ListTile(
                     iconColor: Colors.grey,
                     title: Text(
                       "Cal: $calories Fat: $fat Fib: $fibers Carb: $carbs Prot: $proteins",
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15),
                     )),
                 const SizedBox(
                   height: 280,
@@ -102,12 +104,18 @@ class _FoodMLState extends State<FoodML> {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         automaticallyImplyLeading: widget.boolLeading,
-        title: const Center(
-          child: Text(
-            "AI Food Camera",
-            style: TextStyle(
-                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),
-          ),
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "AI Food Camera",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 25),
+            ),
+          ],
         ),
       ),
       body: SafeArea(

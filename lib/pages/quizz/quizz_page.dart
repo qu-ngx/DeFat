@@ -29,7 +29,7 @@ class _QuizzPageState extends State<QuizzPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 35,
+                  height: 30,
                 ),
                 Text(
                   "Quizz",
@@ -39,7 +39,7 @@ class _QuizzPageState extends State<QuizzPage> {
                       fontSize: 25),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 25,
                 )
               ],
             ),

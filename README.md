@@ -25,8 +25,6 @@ Project compose 2 repositories:
 
 ## Local Installation
 
- **  Coming soon  ** 
-
 **Requirements**:
 
 - Flutter: [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
@@ -34,8 +32,6 @@ Project compose 2 repositories:
 - Android Studio: [https://developer.android.com/studio](https://developer.android.com/studio)
 - Xcode: [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)
 - Run on your physical device with the instruction [here](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-device) (for iOS) and [here](https://flutter.dev/docs/get-started/install/windows#set-up-the-android-device) (for Android).
-
-## How to run the project on local machine
 
 **Steps**:
 

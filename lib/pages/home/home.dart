@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 210),
@@ -116,49 +116,52 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(
                     height: 15,
                   ),
-                  SizedBox(
-                    height: 250,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        TipCard(
-                          imgPath: "assets/images/vegetable.png",
-                          firstFirst: "Greenish",
-                          firstFirstColor: Colors.green.shade300,
-                          secondFirst: " your dish",
-                          secondFirstColor: Colors.grey,
-                          bottomLine: "To gain more fibers",
-                          bottomColor: Colors.green[500],
-                        ),
-                        TipCard(
-                          imgPath: "assets/images/poultry_fish.png",
-                          firstFirst: "Eat more",
-                          firstFirstColor: Colors.green.shade300,
-                          secondFirst: " poultry & fish",
-                          secondFirstColor: Colors.grey,
-                          bottomLine: "To gain good proteins, omega\n",
-                          bottomColor: Colors.green[500],
-                        ),
-                        TipCard(
-                          imgPath: "assets/images/meat.png",
-                          firstFirst: "Reduce",
-                          firstFirstColor: Colors.red.shade300,
-                          secondFirst: " red meat",
-                          secondFirstColor: Colors.red.shade800,
-                          bottomLine:
-                              "To reduce cholesterol, strokes\n and heart attacks",
-                          bottomColor: Colors.green[500],
-                        ),
-                        TipCard(
-                          imgPath: "assets/images/fast-food.png",
-                          firstFirst: "Say no",
-                          firstFirstColor: Colors.red.shade300,
-                          secondFirst: " to fast food",
-                          secondFirstColor: Colors.yellow.shade700,
-                          bottomLine: "To reduce fat in blood\n",
-                          bottomColor: Colors.green[500],
-                        ),
-                      ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: SizedBox(
+                      height: 250,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          TipCard(
+                            imgPath: "assets/images/vegetable.png",
+                            firstFirst: "Greenish",
+                            firstFirstColor: Colors.green.shade300,
+                            secondFirst: " your dish",
+                            secondFirstColor: Colors.grey,
+                            bottomLine: "To gain more fibers",
+                            bottomColor: Colors.green[500],
+                          ),
+                          TipCard(
+                            imgPath: "assets/images/poultry_fish.png",
+                            firstFirst: "Eat more",
+                            firstFirstColor: Colors.green.shade300,
+                            secondFirst: " poultry & fish",
+                            secondFirstColor: Colors.grey,
+                            bottomLine: "To gain good proteins, omega\n",
+                            bottomColor: Colors.green[500],
+                          ),
+                          TipCard(
+                            imgPath: "assets/images/meat.png",
+                            firstFirst: "Reduce",
+                            firstFirstColor: Colors.red.shade300,
+                            secondFirst: " red meat",
+                            secondFirstColor: Colors.red.shade800,
+                            bottomLine:
+                                "To reduce cholesterol, strokes\n and heart attacks",
+                            bottomColor: Colors.green[500],
+                          ),
+                          TipCard(
+                            imgPath: "assets/images/fast-food.png",
+                            firstFirst: "Say no",
+                            firstFirstColor: Colors.red.shade300,
+                            secondFirst: " to fast food",
+                            secondFirstColor: Colors.yellow.shade700,
+                            bottomLine: "To reduce fat in blood\n",
+                            bottomColor: Colors.green[500],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -196,7 +199,7 @@ class _HomePageState extends State<HomePage> {
                       width: 350,
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.orange,
+                        color: Colors.orange.shade700,
                         borderRadius: BorderRadius.circular(20),
                         border: Border(
                           top: BorderSide(
