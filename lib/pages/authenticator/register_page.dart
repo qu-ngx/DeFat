@@ -67,13 +67,12 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 30),
               // Logo
-              const Icon(
-                Icons.lock,
-                size: 50,
+              Image.asset(
+                "assets/icons/NuFit.PNG",
+                width: 175,
+                height: 165,
               ),
-              const SizedBox(height: 30),
               const Text(
                 "Let's sign you up!",
                 style: TextStyle(
@@ -140,7 +139,7 @@ class _RegisterPageState extends State<RegisterPage> {
               // Sign Up Button
               SignInOutButton(signState: "Sign Up", onTap: signUserUp),
 
-              const SizedBox(height: 40),
+              const SizedBox(height: 10),
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -167,7 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
               // Google sign in symbol (to be added features)
 
               Row(

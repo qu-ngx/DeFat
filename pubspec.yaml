@@ -25,6 +25,7 @@ dependencies:
   firebase_storage: ^11.6.4
   google_sign_in: ^6.2.1
   change_app_package_name: ^1.1.0
+  flutter_launcher_icons: ^0.13.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -37,3 +38,7 @@ flutter:
    - assets/images/
    - assets/logo/
    - assets/splash/
+flutter_icons:
+  android: "nufit"
+  ios: true
+  image_path: "assets/icons/NuFit.PNG"

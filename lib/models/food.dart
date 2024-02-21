@@ -7,6 +7,7 @@ class Food {
   double proteins;
   double carbs;
   double fibers;
+  String details;
 
   Food(
       {required this.label,
@@ -16,7 +17,8 @@ class Food {
       required this.fat,
       required this.proteins,
       required this.carbs,
-      required this.fibers});
+      required this.fibers,
+      required this.details});
 
   // String get _label => label;
   // String get _name => name;

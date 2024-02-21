@@ -144,7 +144,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   ),
 
                   Text(
-                    "Something please do description later or import from the food file",
+                    widget.food.details,
                     style: TextStyle(
                       color: Colors.grey[600],
                       fontSize: 14,
@@ -167,7 +167,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "${widget.food.calories} calories \n per 100 grams",
+                      "${widget.food.calories} calories \n per serving",
                       style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
