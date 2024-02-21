@@ -48,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
       ),
       body: ListView(
         children: [
@@ -115,7 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
           SignInOutButton(signState: "Sign Out", onTap: signUserOut),
 
           const SizedBox(
-            height: 30,
+            height: 400,
           )
         ],
       ),

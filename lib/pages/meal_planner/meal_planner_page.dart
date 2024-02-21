@@ -66,6 +66,7 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                     const SizedBox(
                       height: 15,
                     ),
+
                     Center(
                         child: CircularPercentIndicator(
                       radius: 120,
@@ -151,7 +152,45 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                       ],
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 10,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 12),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Recommend",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.orange),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "< 65g ",
+                          style: TextStyle(
+                              color: Colors.red, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "300g",
+                          style: TextStyle(
+                              color: Colors.brown, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          ">30g",
+                          style: TextStyle(
+                              color: Colors.green, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "50g",
+                          style: TextStyle(
+                              color: Colors.blue, fontWeight: FontWeight.bold),
+                        )
+                      ],
                     ),
                     Container(
                       color: Colors.transparent,
@@ -239,7 +278,6 @@ class _MealPlannerPageState extends State<MealPlannerPage> {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 30),
                           ],
                         ),
                       ),
