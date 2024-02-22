@@ -66,8 +66,14 @@ class _DictPageState extends State<DictPage> {
                   child: TextField(
                     autofocus: false,
                     decoration: InputDecoration(
-                      prefixIcon: const Icon(
-                        Icons.find_in_page,
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                          "assets/icons/finder.png",
+                          width: 2,
+                          height: 2,
+                          color: Colors.orange,
+                        ),
                       ),
                       filled: true,
                       hintText: "Search for food",

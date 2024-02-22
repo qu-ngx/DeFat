@@ -95,13 +95,51 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     height: 25,
                   ),
 
+                  const Row(
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Kcal",
+                        style: TextStyle(color: Colors.orange),
+                      ),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text(
+                        "Fat",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Text(
+                        "Carbs",
+                        style: TextStyle(color: Colors.brown),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Fibers",
+                        style: TextStyle(color: Colors.green),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(
+                        "Prot",
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ],
+                  ),
                   // Calories
                   Row(
                     children: [
                       // logo for calories if has (Later change to circle or percent widget)
-                      const SizedBox(width: 25),
                       Icon(
-                        Icons.food_bank,
+                        Icons.circle,
                         color: Colors.orange.shade200,
                       ),
 
@@ -115,7 +153,74 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                         style: TextStyle(
                             color: Colors.grey[600],
                             fontWeight: FontWeight.bold),
-                      )
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+
+                      Icon(
+                        Icons.circle,
+                        color: Colors.red.shade200,
+                      ),
+
+                      // number of calories
+                      Text(
+                        widget.food.fat.toString(),
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.bold),
+                      ),
+
+                      const SizedBox(
+                        width: 10,
+                      ),
+
+                      Icon(
+                        Icons.circle,
+                        color: Colors.brown.shade200,
+                      ),
+
+                      // number of calories
+                      Text(
+                        widget.food.carbs.toString(),
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.bold),
+                      ),
+
+                      const SizedBox(
+                        width: 10,
+                      ),
+
+                      Icon(
+                        Icons.circle,
+                        color: Colors.green.shade200,
+                      ),
+
+                      // number of calories
+                      Text(
+                        widget.food.fibers.toString(),
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.bold),
+                      ),
+
+                      const SizedBox(
+                        width: 10,
+                      ),
+
+                      Icon(
+                        Icons.circle,
+                        color: Colors.blue.shade200,
+                      ),
+
+                      // number of calories
+                      Text(
+                        widget.food.proteins.toString(),
+                        style: TextStyle(
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
 
