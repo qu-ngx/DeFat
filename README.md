@@ -5,9 +5,34 @@
 [![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
 [![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 
-> The application uses AI technology to enrich users' knowledge on nutritions of dishes and enables them to create a suitable meal for their diets and help people lose weights.
+<p align="center">
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/091e364a-cf58-428f-8cd8-e704edcb187f" alt="drawing" width="300" height="300"/>
+</p>
 
-**Watch NuFit demo video here: [NuFit - GSC24]()**
+
+> NuFit is an application developed by a group of four students from the Google Developer Student Club - DePauw University Chapter. Our app aims to create nutritious and healthy meal plans for anyone who is on a diet by using AI Camera technology to inform on different types of food, helping organize their healthy meals, and providing information through fun quizzes.
+
+**Watch NuFit demo video here: [NuFit - GDSC Solution Challenge 2024](https://youtu.be/tX5rReaz9Qc)**
+
+## Our user survey
+
++ By the time we completed the project, we have surveyed 102 different people in our application's launching survey.
++ The survey shows that 87.3% of all the surveyed groups like and think that our ideas are applicable as a solution to the problems we are challenging ourselves to. At the same time, 75.5% of the surveyed users found that our application is practical to our goals and that we could solve our UN Problems.
+
+<p align="center">
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/e0038e75-78ef-4d74-8b01-e59cba18cd57" alt="drawing" width="900" height="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/ff1f3a83-a210-4460-8046-3d9f1da3ad6a" alt="drawing" width="900" height="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/21314c27-d334-43a3-a295-a8d4a935c407" alt="drawing" width="900" height="500"/>
+</p>
+
+
+
 
 ## Project structure module
 
