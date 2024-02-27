@@ -34,10 +34,10 @@
 </p>
 
 <p align="center">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ab4de4a-4410-4b0a-b4e6-a4b279d82c3b">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ad23228-0de8-4480-bcd9-2feeb0aef0c1">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/5216d51e-ef66-458d-a0ef-0a21be85f1ec">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/ed2f785a-7b8a-42f3-a922-cb1af5f39757">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ab4de4a-4410-4b0a-b4e6-a4b279d82c3b">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ad23228-0de8-4480-bcd9-2feeb0aef0c1">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/5216d51e-ef66-458d-a0ef-0a21be85f1ec">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/ed2f785a-7b8a-42f3-a922-cb1af5f39757">
 </p>
 
 
@@ -55,10 +55,10 @@
 **Machine Learning (Tensorflow):**
 + This feature was implemented for AI Food Camera:
 <p align="center">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/703fe187-0a5b-4258-97c4-42c96edbe01e">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/00af8b48-3f51-4548-9cf5-a84eeadfc9da">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/bc1b905c-8d0d-402f-acf7-10e935ac26a1">
-<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/4cd01adf-05fc-4409-916a-67fbfcbd59ab">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/703fe187-0a5b-4258-97c4-42c96edbe01e">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/00af8b48-3f51-4548-9cf5-a84eeadfc9da">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/bc1b905c-8d0d-402f-acf7-10e935ac26a1">
+<img width="169" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/4cd01adf-05fc-4409-916a-67fbfcbd59ab">
 </p>
 
 ## Project structure module
