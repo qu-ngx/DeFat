@@ -20,24 +20,50 @@
 + The survey shows that 87.3% of all the surveyed groups like and think that our ideas are applicable as a solution to the problems we are challenging ourselves to. At the same time, 75.5% of the surveyed users found that our application is practical to our goals and that we could solve our UN Problems.
 
 <p align="center">
-  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/e0038e75-78ef-4d74-8b01-e59cba18cd57" alt="drawing" width="900" height="500"/>
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/e0038e75-78ef-4d74-8b01-e59cba18cd57" alt="drawing" width="500" height="278"/>
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/ff1f3a83-a210-4460-8046-3d9f1da3ad6a" alt="drawing" width="500" height="278"/>
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/21314c27-d334-43a3-a295-a8d4a935c407" alt="drawing" width="500" height="278"/>
+</p>
+
+## Application features
+
+**LogIn/Register/LogOut Screens:**
++ Firebase Authentication was used for login/logout/register screens and easy Google login screen. 
+<p align="center">
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/ead38b8c-8ae9-4165-adce-d9eb222e54ed" alt="drawing" width="500" height="278"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/ff1f3a83-a210-4460-8046-3d9f1da3ad6a" alt="drawing" width="900" height="500"/>
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ab4de4a-4410-4b0a-b4e6-a4b279d82c3b">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/7ad23228-0de8-4480-bcd9-2feeb0aef0c1">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/5216d51e-ef66-458d-a0ef-0a21be85f1ec">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/ed2f785a-7b8a-42f3-a922-cb1af5f39757">
 </p>
 
+
+**Quiz contents and Quiz Page:**
++ Firebase Storage was implemented for quiz page and its contents:
 <p align="center">
-  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/21314c27-d334-43a3-a295-a8d4a935c407" alt="drawing" width="900" height="500"/>
+  <img src="https://github.com/qu-ngx/NuFit/assets/91497379/79fbc7da-4e49-41a2-b8a1-51690ff923a2" alt="drawing" width="500" height="278"/>
+</p>
+<p align="center">
+<img width="299" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/32b89577-2e87-4374-af4f-c2dd563ec4ea">
+<img width="308" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/b92c9d25-f39f-436b-9df8-d163351d367f">
 </p>
 
 
-
+**Machine Learning (Tensorflow):**
++ This feature was implemented for AI Food Camera:
+<p align="center">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/703fe187-0a5b-4258-97c4-42c96edbe01e">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/00af8b48-3f51-4548-9cf5-a84eeadfc9da">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/bc1b905c-8d0d-402f-acf7-10e935ac26a1">
+<img width="225" alt="image" src="https://github.com/qu-ngx/NuFit/assets/91497379/4cd01adf-05fc-4409-916a-67fbfcbd59ab">
+</p>
 
 ## Project structure module
 
 Project compose 2 repositories:
-
 1. Full-stack Mobile Application: [current repository](./)
 2. Backend AI Model: [Food Detection API](https://github.com/qu-ngx/nufit-ml.git)
 
