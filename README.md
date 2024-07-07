@@ -1,5 +1,10 @@
 # νFit / NuFit
 
+**Warning: The project is no longer maintained after 6th July, 2024. Please use at your own risks**
+<br></br>
+If you have any question, please contact project's owner at quang13012005@gmail.com
+<br></br>
+
 [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/learn#build-models)
 [![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
@@ -72,7 +77,9 @@ Project compose 2 repositories:
 
 ## Mobile Installation
 
- **  Coming soon  ** 
+Please follow the guide here: 
+- Android: [https://docs.flutter.dev/deployment/android](https://docs.flutter.dev/deployment/android)
+- IOS: [https://docs.flutter.dev/deployment/ios](https://docs.flutter.dev/deployment/ios)
 
 ## Local Installation
 
